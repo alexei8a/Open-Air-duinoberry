@@ -252,5 +252,5 @@ app.get("/", function(req, res){
 
 
 server.listen("3300");
-  console.log('Servidor en línea: http://localhost:3300');
+  console.log('Servidor en línea: http://192.168.0.77:3300');
 

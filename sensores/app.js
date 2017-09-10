@@ -250,6 +250,6 @@ app.use("/app",router_app);
 
 app.use("/app/devices",router_sen);
 
-server.listen("9090"/*, "192.168.0.77"*/);
-console.log('Servidor en línea: http://localhost:9090');
+server.listen("9090");
+console.log('Servidor en línea: http://192.168.0.77:9090');
 
