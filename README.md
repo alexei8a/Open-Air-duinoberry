@@ -9,7 +9,7 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 </p>
 
   <br><br>
-[Repositorio GitHub](https://github.com/alexei8a/Open-Air-duinoberry.git)
+[Wiki con la documentación](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
 
 
 
