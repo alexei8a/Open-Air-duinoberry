@@ -1,6 +1,6 @@
 # Open-Air-duinoberry
 
-<center>Centered text</center>
+-> This is center aligned <-
 
 Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 
