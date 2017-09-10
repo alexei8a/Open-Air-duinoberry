@@ -1,7 +1,7 @@
 # Open-Air-duinoberry
 
--> This is center aligned <-
 
+<p align="center">
 Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 
 
@@ -12,3 +12,4 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 
 
 [Repositorio GitHub](https://github.com/alexei8a/Open-Air-duinoberry.git)
+</p>
