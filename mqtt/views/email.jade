@@ -1,0 +1,22 @@
+doctype html
+head
+    meta(http-equiv = "Content-Type", content = "text/html; charset=UTF-8")
+    title= subject
+      
+body
+    h1.h1 Hubo un problema con tus sensores
+    p Las medidas del sensor #{key} se encuentran fuera de los límites definidos.
+    br
+    p Se han registrado los siguientes valores #{data}
+    p
+      | Este es un sistema básico de alertas que te avisa cuando se exceden los límites definidos para valores de las mediciones realizadas por tus sensores.
+      br
+      | Te agradecemos por utilizar esta aplicación y esperamos que sigamos construyendo en comunidad.
+    p Puedes revisar la siguiente documentación sobre el proyecto:
+    p 
+    ol
+      li  #[a(href="http://github.com") Registro de dispositivos y sensores]  
+      li  Medición de variables registradas
+      li  Realización de dashboards con las mediciones
+      li  Generación de alertas
+

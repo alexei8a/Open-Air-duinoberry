@@ -1,0 +1,80 @@
+<!-- Filename: main.handlebars -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="/public/css/app.css" rel="stylesheet">
+    <title>Open Air-duinoberry</title>
+</head>
+<body>
+	
+
+	<header>
+		<nav class="large-padding black white-text">
+			<img style="border-width:0;float:left" src="/public/img/imagen.png"  />
+			<h3 align="center"> Vista de archivos JSON con las mediciones</h3>
+		</nav>
+	</header>
+	<br>   </br>
+	<div class='container' align="center">
+		
+	</div>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getMQ7" style="font-size: large download">MQ7</a>	
+			</div>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getDHT11" style="font-size: large download">DHT11</a>
+			</div>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getDHT22" style="font-size: large download">DHT22</a>
+
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getBMP180" style="font-size: large download">BMP180</a>	
+				
+			</div>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getGP2Y1010AU0F" style="font-size: large download">GP2Y1010AU0F</a>	
+			</div>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getMQ135" style="font-size: large download">MQ135</a>	
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-4'>
+				<a href="http://192.168.0.77:3300/getGPS" style="font-size: large download">GPS</a>	
+			</div>
+			<div class='col-md-4'>			
+				<a href="http://192.168.0.77:3300/after" style="font-size: medium">Mediciones nuevas</a>		
+			</div>
+			<div class='col-md-4'>	
+				<a href="http://192.168.0.77:3300/before" style="font-size: medium">Mediciones anteriores</a>	
+			</div>
+		</div>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+<br>   </br>
+
+<footer  style="font-size: xx-small">
+	<div align="center">
+		<a href="mailto:agochoad@unal.edu.co" style="font-size: small">Contacto</a>
+		<br>
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" >
+				<img alt="Licencia Creative Commons" style="border-width:0;width:60px;height:auto" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+			</a>
+		<br />
+			Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+				Licencia Creative Commons Atribución 4.0 Internacional
+			</a>.
+		</br>
+	</div>
+</footer>
+
+</html>

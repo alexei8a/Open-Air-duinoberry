@@ -1,0 +1,44 @@
+doctype html
+html(lang="es")
+	head
+		title Open Air-duinoberry
+		meta(charset="utf-8")
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet")
+		link(href="/public/css/app.css" rel="stylesheet")
+		script(src="/socket.io/socket.io.js")
+	body
+		nav(class="large-padding black white-text")
+			ul
+				li(class="giant2-right-space")
+					img(src="/public/img/imagen.png")
+				li 
+					a(href="/app") Inicio
+				li 
+					a(href="/app/devices") Mis Dispositivos	
+				li 
+					a(href="/logout") Cerrar
+
+		.container
+			if messages.error
+				.alert.alert-danger #{messages.error}  
+			if messages.info
+				.alert.alert-info #{messages.info}  
+			if messages.success
+				.alert.alert-success #{messages.success}
+				
+			
+	block contenido
+	
+	block footer	
+	footer
+		nav(class="large-padding")
+			p(class="top-space2 mid-left-space2",style="font-size: xx-small")
+				a(href='mailto:agochoad@unal.edu.co?Subject=Consulta%20Open%20Air-duinoberry',style="font-size: small") Contacto
+				br
+				a(rel='license', href='http://creativecommons.org/licenses/by/4.0/')
+					img(alt='Creative Commons License', style='border-width:0;width:60px;height:auto', src='https://i.creativecommons.org/l/by/4.0/88x31.png')
+				br
+				| Esta obra está bajo una
+				br
+				a(rel='license', href='http://creativecommons.org/licenses/by/4.0/') Licencia Creative Commons Atribución 4.0 Internacional
+				| .

@@ -1,0 +1,20 @@
+extends ./layout2.jade
+block contenido			
+	div(class="col-md-6 remove-float mx-auto mid-top-space")
+		h2 Iniciar sesión
+			img(src="/public/img/login.png", style="float:right")
+		form(action="/sessions",method="POST")
+			div(class="form-group")
+				label(for="username") Username
+				input(type="text",name="username",placeholder="Username",id="username",class="form-control")
+			div
+				label(for="password") Contraseña
+				input(type="password",name="password",placeholder="Password",id="password",class="form-control")
+			div(class="row top-space")
+				div(class="col-xs-12 col-sm-4")
+					input(type="submit" value="Ingresar" class="btn btn-info")
+				div(class="col-xs-12 col-sm-8 text-right")
+					a(href="/signup",class="big-right-space") Deseo registrarme
+					a(href="/forgot") Recordar contraseña
+	
+		

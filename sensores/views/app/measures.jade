@@ -1,0 +1,14 @@
+extends ../layout.jade
+block contenido
+	div(class="container")
+		h7 Hola #{user.name}
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		h1 Visualización de mediciones
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		img(src="/public/img/chart.png",class="right-space", style="width:250px;height:auto")
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		a(href="http://192.168.0.77:3300/after",class="right-space2", style="font-size: x-large ") Ver mediciones nuevas
+		a(href="http://192.168.0.77:3300/before", style="font-size: x-large") Ver mediciones anteriores
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		a(href="http://192.168.0.77:3300", style="font-size: x-large") Ver archivos JSON de las mediciones
+	script(src="/public/js/client.js")

@@ -1,0 +1,8 @@
+extends ../../../layout.jade
+block contenido
+	h1=sensor.title
+	if(typeof sensor.creator != "undefined")
+		p Ubicado en #{device.title}
+		p Es un sensor #{sensor.type}
+		p Tiene una #{sensor.signal} como salida
+		a(href="/app/devices/#{device._id}/sensorlist") Ver mis sensores

@@ -1,0 +1,36 @@
+extends ../../../layout.jade
+block contenido
+	div(class="col-md-6 remove-float mx-auto mid-top-space")
+		h2 Editar sensor
+			img(src="/public/img/edit.png", style="float:right")
+		form(action="/app/devices/#{device.id}/sensors/#{sensor.id}?_method=PUT",method="POST")
+			div(class="form-group")
+				label(for="title") Nombre
+				select(name="title",class="form-control") 
+					option(value="DHT11") DHT11
+					option(value="DHT22") DHT22
+					option(value="BMP180") BMP180
+					option(value="MQ7") MQ7
+					option(value="MQ135") MQ135
+					option(value="GP2Y1010AU0F") GP2Y1010AU0F
+					option(value="GPS Neo-6M") GPS Neo-6M
+			div
+				label(for="type") Tipo de sensor
+				select(name="type",class="form-control") 
+					option(value="Digital") Digital
+					option(value="Análogo") Análogo
+			div
+				label(for="signal") Señal de salida
+				select(name="signal",class="form-control") 
+					option(value="Señal digital calibrada") Señal digital calibrada
+					option(value="Señal Análoga") Señal análoga
+					option(value="Interfaz I2C") Interfaz I2C
+			div(class="row top-space")
+				div(class="col-xs-12 col-sm-6")
+					input(type="submit" value="Guardar" class="btn btn-info")
+
+
+		
+		
+		
+		

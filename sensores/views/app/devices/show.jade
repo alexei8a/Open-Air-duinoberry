@@ -1,0 +1,10 @@
+extends ../../layout.jade
+block contenido
+	div(class="container col-md-6 remove-float mx-auto mid-top-space")
+		h1=device.title
+			img(src="/public/img/ok.png", style="float:right") 
+		if(typeof device.creator != "undefined")
+			p Creado por #{device.creator.name}
+			p Se comunica mendiante el protocolo #{device.comm_protocol}
+		div
+			a(href="/app/devices") Ver mis dispositivos

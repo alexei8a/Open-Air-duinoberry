@@ -1,0 +1,16 @@
+extends ../layout.jade
+block contenido
+	div(class="container")
+		h5 Hola #{user.name}
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		h2 Registro de dispositivos
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		img(src="/public/img/microcontroller.png",class="right-space")
+		img(src="/public/img/raspi.png")
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		a(href="/app/devices/new",class="right-space") Crear dispositivos
+		a(href="/app/reset") Cambiar contraseña
+	script(src="/public/js/client.js")
+		
+
+

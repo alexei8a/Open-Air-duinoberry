@@ -1,0 +1,25 @@
+doctype html
+head
+    meta(http-equiv = "Content-Type", content = "text/html; charset=UTF-8")
+    title= subject
+      
+body
+    h1.h1 Recordar contraseña de acceso
+    h2.h2 Hola #{nombre}
+    p Alguna persona (esperamos que hayas sido tú) solicitó recordar la contraseña de inicio
+      | A continuación te enviamos tus datos de ingreso
+      br
+      br
+      | Tu usuario es: #{usuario}
+      br
+      | Tu contraseña es:  #{pass}
+      br
+      br
+      | Te agradecemos por utilizar esta aplicación y esperamos que sigamos construyendo en comunidad.
+    p Puedes revisar la siguiente documentación sobre el proyecto:
+    p 
+    ol
+      li  #[a(href="http://github.com") Registro de dispositivos y sensores]  
+      li  Medición de variables registradas
+      li  Realización de dashboards con las mediciones
+      li  Generación de alertas

@@ -1,0 +1,14 @@
+extends layout2
+block contenido
+	div(class="col-md-8 remove-float text-center mx-auto mid-top-space")
+		form(method="POST")
+			h1 Cambiar contraseña
+				div(class="form-group top-space")
+					input(type="password",name="password",placeholder="Password",id="password",class="form-control")
+				div
+					input(type="password",name="password_confirmation",placeholder="Confirma tu Password",id="password_confirmation",class="form-control")
+				div(class="top-space")
+					input(type="submit" value="Aceptar" class="btn btn-info")
+					
+
+

@@ -1,0 +1,92 @@
+<!-- Filename: main.handlebars -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="/public/css/app.css" rel="stylesheet">
+    <title>Open Air-duinoberry</title>
+</head>
+<body>
+	<header>
+		<nav class="large-padding black white-text">
+			<img style="border-width:0;float:left" src="/public/img/imagen.png"  />
+			<h3 align="center"> Histórico de mediciones</h3>
+			<a href="http://192.168.0.77:9090/app" style="font-size:large" align="right">Regresar</a>
+		</nav>
+	</header>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-4'>
+				<canvas id="myChartMQ7" width="400" height="400"></canvas>
+			</div>
+			<div class='col-md-4'>
+				<canvas id="myChartDHT11" width="400" height="400"></canvas>
+			</div>
+			<div class='col-md-4'>
+				<canvas id="myChartDHT22" width="400" height="400"></canvas>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-4'>
+				<canvas id="myChartBMP180P" width="400" height="400"></canvas>
+			</div>
+			<div class='col-md-4'>
+				<canvas id="myChartBMP180T" width="400" height="400"></canvas>
+			</div>
+			<div class='col-md-4'>
+				<canvas id="myChartGP2Y1010AU0F" width="400" height="400"></canvas>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-4'>
+				<canvas id="myChartMQ135" width="400" height="400"></canvas>
+			</div>
+			<div class='col-md-4'>
+				<br>	<br />
+				<br>	<br />
+					<br>	<br />
+					<div align="center">
+						<img src="/public/img/imagen.png" alt="Air-duinoberry" width="100" height="100">
+						<br> <br />
+
+					</div>
+					<br>	<br />
+					<footer  style="font-size: xx-small">
+						<div align="center">
+							<a href="mailto:agochoad@unal.edu.co" style="font-size: small">Contacto</a>
+							<br>
+								<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" >
+									<img alt="Licencia Creative Commons" style="border-width:0;width:60px;height:auto" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+								</a>
+								<br />
+									Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+									Licencia Creative Commons Atribución 4.0 Internacional
+								</a>.
+							</br>
+						</div>
+					</footer>
+			</div>
+			<div class='col-md-4'>	
+				<style>
+					#map {
+						height: 400px;
+						width: 400px;
+						}
+				</style>
+				<div id="map"></div>
+				
+			</div>
+		</div>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" /></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="/public/js/AirChart2.js" charset="utf-8"></script>
+</body>
+
+
+
+</html>

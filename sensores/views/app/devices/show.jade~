@@ -1,0 +1,7 @@
+extends ../../layout.jade
+block contenido
+	h1=device.title
+	if(typeof device.creator != "undefined")
+		p Creado por #{device.creator.name}
+		p Se comunica mendiante el protocolo #{device.comm_protocol}
+		a(href="/app/devices") Ver mis dispositivos

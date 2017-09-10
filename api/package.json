@@ -1,0 +1,40 @@
+{
+  "name": "mediciones-open-air-duinoberry",
+  "version": "1.0.0",
+  "description": "Pruebas de mediciones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "MQTT",
+    "Bluetooth",
+    "sensores"
+  ],
+  "author": "Alexei Ochoa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chart.js": "^2.6.0",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.9",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.7",
+    "morgan": "^1.8.2",
+    "mqtt": "^2.12.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.3",
+    "serve-favicon": "^2.4.3",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "map-tools": "^2.0.0"
+  }
+}

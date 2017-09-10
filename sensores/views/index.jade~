@@ -1,0 +1,9 @@
+extends ./layout2.jade
+block contenido
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		h1 Bienvenidos a Open Air-duinoberry
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		img(src="/public/img/airduinoberry.png")
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		a(href="/login",class="right-space") Iniciar Sesión
+		a(href="/signup") Registro de usuario nuevo

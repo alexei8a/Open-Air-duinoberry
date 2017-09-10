@@ -1,0 +1,11 @@
+extends ../../../layout.jade
+block contenido
+	div(class="container col-md-6 remove-float mx-auto mid-top-space")
+		h1=sensor.title
+			img(src="/public/img/ok.png", style="float:right") 
+		if(typeof sensor.creator != "undefined")
+			p Ubicado en #{device.title}
+			p Es un sensor #{sensor.type}
+			p Tiene una #{sensor.signal} como salida
+		div
+			a(href="/app/devices/#{device._id}/sensorlist") Ver mis sensores

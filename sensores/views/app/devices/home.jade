@@ -1,0 +1,14 @@
+extends ../../layout.jade
+block contenido
+	div(class="container")
+		h7 Hola #{user.name}
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		h1 Registro de sensores en #{device.title}
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		img(src="/public/img/sensor.png",class="right-space")
+		img(src="/public/img/sensor2.png")
+	div(class="col-md-8 remove-float text-center mx-auto top-space")
+		a(href="/app/devices/#{device._id}/sensors/new",class="right-space2",style="font-size: x-large") Crear sensor
+		a(href="/app/devices/#{device._id}/sensorlist",style="font-size: x-large") Mis sensores
+	script(src="/public/js/client.js")
+

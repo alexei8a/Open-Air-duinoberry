@@ -1,0 +1,126 @@
+.right-space{
+	margin-right: 1em;
+}
+
+.right-space2{
+	margin-right: 3em;
+}
+
+.mid-left-space2{
+	margin-left: 5em;
+}
+
+.mid-left-space{
+	margin-left: 2.5em;
+}
+
+.mini-left-space{
+	margin-left: 1em;
+}
+
+.left-space{
+	margin-left: 53em;
+}
+
+.giant-left-space{
+	margin-left: 63em;
+}
+
+.left-space2{
+	margin-left: 36em;
+}
+
+.left-space3{
+	margin-left: 47em;
+}
+
+.big-right-space{
+	margin-right: 5em;
+}
+
+.big-right-space2{
+	margin-right: 25em;
+}
+
+.giant-right-space{
+	margin-right: 52em;
+}
+
+.giant2-right-space{
+	margin-right: 40em;
+}
+
+.remove-float{
+	float: none;
+}
+
+.top-space{
+	margin-top: 1.5em;
+}
+
+.top-space2{
+	margin-top: 0.5em;
+}
+
+
+.mid-top-space{
+	margin-top: 100px;
+}
+
+.big-top-space{
+	margin-top: 222px;
+}
+
+.large-padding{
+	padding: 10px 15px;
+}
+
+.black{
+	background-color: #222;
+}
+
+.white-text{
+	color:white;
+}
+
+nav{
+	text-align: right;
+}
+
+nav li{
+	display: inline-block;
+	margin-right: 1em;
+	font-size: 1.3em;
+}
+
+nav li a{
+	color: white;
+}
+
+nav li a:hover{
+	color: white;
+}
+
+.white{
+	background-color:white;
+}
+
+.border{
+	border:solid 1px #eee;
+}
+
+.tr:nth-of-type(odd){
+	background-color: #eee;
+}
+
+form.link{
+	display: inline-block;
+}
+
+form.link input[type="submit"]{
+	background-color: transparent;
+	border: none;
+	color:rgb(200,50,50);
+}
+
+
