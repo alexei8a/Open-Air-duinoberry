@@ -9,6 +9,9 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 </p>
 
   <br><br>
+  Esta es una iniciativa, basada en el software y el hardware libre, que busca hacer interoperables los datos de sensores heterogéneos en el marco de Internet de las Cosas
+  <br><br>
+  
 [Wiki con la documentación](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
 
 
