@@ -1,22 +1,24 @@
 {
-  "name": "mediciones-open-air-duinoberry",
+  "name": "Mediciones-Open-Air-duinoberry",
   "version": "1.0.0",
-  "description": "Pruebas de mediciones",
-  "main": "index.js",
+  "description": "Envío de mediciones y generación de alertas",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git"
+    "url": "https://github.com/alexei8a/Open-Air-duinoberry.git"
   },
   "keywords": [
     "MQTT",
     "Bluetooth",
-    "sensores"
+    "SerialComm",
+    "Sensores",
+    "Alertas"
   ],
-  "author": "Alexei Ochoa",
-  "license": "ISC",
+  "author": "Alexei Ochoa Duarte",
+  "license": "GNU",
   "dependencies": {
     "angular": "^1.6.6",
     "body-parser": "^1.17.2",

@@ -1,5 +1,5 @@
 {
-  "name": "air-duino",
+  "name": "Open-Air-duinoberry",
   "version": "1.0.0",
   "description": "Registro de sensores para IoT",
   "main": "app.js",
@@ -30,14 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "github"
+    "url": "https://github.com/alexei8a/Open-Air-duinoberry.git"
   },
   "keywords": [
     "IoT",
-    "sensors",
-    "interoperability",
-    "open-source"
+    "Sensors",
+    "Interoperability",
+    "Open-source"
   ],
   "author": "Alexei Ochoa Duarte",
-  "license": "ISC"
+  "license": "GNU"
 }
