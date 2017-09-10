@@ -4,7 +4,7 @@
 Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 <br><br>
 <p align="center">
-  <img src="/sensores/public/img/airduinoberry.png">
+  <img src="/nodeJS/sensores/public/img/airduinoberry.png">
   <br><br>
 </p>
 
