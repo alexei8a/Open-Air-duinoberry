@@ -13,7 +13,7 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
   <br><br>
   Esta es una iniciativa, basada en el software y el hardware libre, que hace interoperables los datos de sensores heterogéneos en el marco de Internet de las Cosas
   <br><br>
-   Este es un sistema de medición y monitoreo de algunas de las variables ambientales relacionadas con la calidad del aire, a saber: temperatura, humedad, presión atmosférica, densidad de polvo y concentraciones de monóxido y dióxido de carbono, metano y óxidos de nitrógeno. 
+   Aquí se presenta un sistema de medición y monitoreo de algunas de las variables ambientales relacionadas con la calidad del aire, a saber: temperatura, humedad, presión atmosférica, densidad de polvo y concentraciones de monóxido y dióxido de carbono, metano y óxidos de nitrógeno. 
    <br><br>
 Los datos capturados por los sensores son integrados mediante el microcontrolador central de una tarjeta Arduino, la cual establece comunicación Wifi con un servidor Web, embebido en una Raspberry Pi 3, que mediante el uso del protocolo MQTT y el entorno de ejecución para JavaScript, NodeJS, facilita la inserción de los datos en una base de datos de MongoDB, con la cual se interactúa desde el servidor utilizando el lenguaje de intercambio JSON para hacer interopreables los datos. 
    <br><br>
