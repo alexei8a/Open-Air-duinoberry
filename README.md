@@ -10,12 +10,11 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 
 ## Tabla de contenido ##
   - [Introducción](#introducción)
-  - [Wiki](#wiki)
   - [Configura tu proyecto en GitHub Desktop](#configura-tu-proyecto-en-github-desktop)
   - [Envía tu código a GitHub.com](#envía-tu-código-a-githubcom)
   - [Tomando código desde GitHub.com](#tomando-código-desde-githubcom)
   - [¡Hora de celebrar!](#hora-de-celebrar)
-  
+  - [Wiki](#wiki)
   
   ## Introducción ##
 
