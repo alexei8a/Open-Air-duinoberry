@@ -86,9 +86,18 @@ Estas libreras deben ser añadidas al [Arduino IDE](https://www.arduino.cc/en/Ma
 
 <p align="justify">
   Esta tarjeta debe ser configurada para que su conexión a internet se efectúe automáticamente a la red.
+	 <br><br>
+  A continuación encuentras un [enlace](http://www.techmake.com/arduino-uno-wifi-intro) con la información necesaria para configurar tu Arduino UNO Wifi por primera vez
+	 <br><br>
+	Antes de continuar con la configuración, es importante que la tarjeta se encuentre con el Firmware actualizado. Puedes hacer la actualización siguiendo los pasos de este [tutorial](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin) 
+	 <br><br>
+  Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [enlace](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/)
+	
   </p>
   
-  A continuación encuentras un 
+
+  
+  
 
   ## Wiki ##
   
