@@ -31,7 +31,7 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   
   ## Wiki ##
   
-[Wiki con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
+En este enlace encuentras la [Wiki con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
 
 
 
