@@ -40,7 +40,7 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 | Arduino UNO |
 | Raspberry pi 3 |
 
-
+Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
 
 | Sensor| Cantidad| Variables medidas|
 | ----- | ---- | ---- |
@@ -48,11 +48,15 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 | DHT11 | 1 | Temperatura y humedad relativa |
 | BMP180 | 1 | Presión atmosférica y temperatura |
 
+A continuación se muestran los sensores conectados a la tarjeta Arduino UNO Wifi II
+
 | Sensor| Cantidad| Variables medidas|
 | ----- | ---- | ---- |
 | DHT22 | 1 | Temperatura y humedad relativa |
 | MQ135 | 1 | Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco |
 | GP2Y1010AU0F | 1 | Densidad de polvo |
+
+Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
 
 | Sensor| Cantidad| Variables medidas|
 | ----- | ---- | ---- |
