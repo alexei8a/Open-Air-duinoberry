@@ -52,17 +52,17 @@ Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
 
 A continuación se muestran los sensores conectados a la tarjeta Arduino UNO Wifi II
 
-| Sensor|  Variables medidas|
-| ----- |  ---- |
-| DHT22 |  Temperatura y humedad relativa |
-| MQ135 |  Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco |
-| GP2Y1010AU0F | Densidad de polvo |
+| Sensor|  Variables medidas| Más info |
+| ----- |  ---- | ---- |
+| DHT22 |  Temperatura y humedad relativa | https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf | 
+| MQ135 |  Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco | https://www.olimex.com/Products/Components/Sensors/SNS-MQ135/resources/SNS-MQ135.pdf | 
+| GP2Y1010AU0F | Densidad de polvo | https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf | 
 
 Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
 
-| Sensor | Variables medidas|
-| ----- | ---- |
-| GPS Neo-6M |  Latitud y longitud |
+| Sensor | Variables medidas| Más info |
+| ----- | ---- | ---- |
+| GPS Neo-6M |  Latitud y longitud | https://www.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf |
 
   
   
