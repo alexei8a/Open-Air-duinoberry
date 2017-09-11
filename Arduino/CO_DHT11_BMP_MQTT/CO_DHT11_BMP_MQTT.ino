@@ -2,7 +2,6 @@
 #include <UnoWiFiDevEd.h>
 #include <SimpleDHT.h>
 #include <SFE_BMP180.h>
-#include <Wire.h>
 
 
 #define CONNECTOR "mqtt"
