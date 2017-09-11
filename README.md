@@ -11,7 +11,7 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 ## Tabla de contenido ##
   - [Introducción](#introducción)
   - [Materiales](#materiales)
-  - [Requerimientos para los sensores](#req-sensores)
+  - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
   - [Tomando código desde GitHub.com](#tomando-código-desde-githubcom)
   - [¡Hora de celebrar!](#hora-de-celebrar)
   - [Wiki](#wiki)
