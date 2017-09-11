@@ -39,6 +39,8 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 | DHT11 | 1 | Temperatura y humedad relativa |
 | BMP180 | 1 | Presión atmosférica y temperatura |
 
+| Sensor| Cantidad| Variables medidas|
+| ----- | ---- | ---- |
 | DHT22 | 1 | Temperatura y humedad relativa |
 | MQ135 | 1 | Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco |
 | GP2Y1010AU0F | 1 | Densidad de polvo |
