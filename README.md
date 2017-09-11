@@ -82,6 +82,7 @@ Para probar los sensores, se hace necesario crear unos pequeños programas en el
 
 Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`.
 
+
   ## Configuración de las Arduino UNO Wifi ##
 
   Estas tarjetas deben ser configuradas para que su conexión a internet se efectúe automáticamente a la red.
