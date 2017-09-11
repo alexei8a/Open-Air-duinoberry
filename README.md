@@ -65,7 +65,7 @@ Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
 | GPS Neo-6M |  Latitud y longitud | https://www.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf |
 
   
-  ## Materiales ##
+  ## Requerimientos para los sensores ##
 <p align="justify">
   Para el correcto funcionamiento de los sensores, se hace necesario descargar algunas librerías de Arduino.
   </p>
