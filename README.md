@@ -12,7 +12,8 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
   - [Introducción](#introducción)
   - [Materiales](#materiales)
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
-  - [Tomando código desde GitHub.com](#tomando-código-desde-githubcom)
+  - [Configuración de las Arduino UNO Wifi](#configuracion-de-las-arduino-uno-wifi)
+  - [Configuración de la Raspberry Pi 3](#configuracion-de-la-raspberry-pi-3)
   - [¡Hora de celebrar!](#hora-de-celebrar)
   - [Wiki](#wiki)
   
@@ -38,7 +39,7 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 | Arduino UNO Wifi I | MQTT | https://store.arduino.cc/usa/arduino-uno-wifi |
 | Arduino UNO Wifi II | MQTT | https://store.arduino.cc/usa/arduino-uno-wifi |
 | Arduino UNO | Comunicación serial | https://store.arduino.cc/usa/arduino-uno-rev3 |
-| Raspberry pi 3 | Wifi | https://www.raspberrypi.org/products/raspberry-pi-3-model-b/ |
+| Raspberry Pi 3 | Wifi | https://www.raspberrypi.org/products/raspberry-pi-3-model-b/ |
 
 
 Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
@@ -66,11 +67,11 @@ Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
   
   ## Requerimientos para los sensores ##
 
-Para probar los sensores, se hace necesario crear unos pequeños programas en el entorno de desarrollo de Arduino que permitan visualizar los datos tomados en el puerto serial.
+Para probar los sensores, se hace necesario crear unos pequeños programas en el entorno de desarrollo de Arduino que permitan visualizar los datos tomados en el puerto serial. [Descarga de Arduino IDE](https://www.arduino.cc/en/Main/Software).
    <br><br>
-	Para mayor información sobre el entorno de programación de Arduino, puedes visitar el siguiente [enlace](	https://www.arduino.cc/en/Guide/HomePage)
+	Para mayor información sobre el entorno de programación de Arduino y encontrar ejempĺos, puedes visitar el siguiente [enlace](	https://www.arduino.cc/en/Guide/HomePage)
    <br><br>
-  Se hace necesario descargar algunas librerías de Arduino para el correcto funcionamiento de los sensores enunciados anteriormente.
+  También, se hace necesario descargar algunas librerías de Arduino para el correcto funcionamiento de los sensores enunciados anteriormente.
   
   
 | Librería | Sensor que la usa | Enlace para descargar |
@@ -79,23 +80,19 @@ Para probar los sensores, se hace necesario crear unos pequeños programas en el
 | SFE_BMP180 |  BMP180 | https://github.com/LowPowerLab/SFE_BMP180 |
 | TinyGPSPlus |  GPS Neo-6m | https://github.com/mikalhart/TinyGPSPlus |
 
-Estas libreras deben ser añadidas al [Arduino IDE](https://www.arduino.cc/en/Main/Software) mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`
+Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`
 
   ## Configuración de las Arduino UNO Wifi ##
 
-
-  Esta tarjeta debe ser configurada para que su conexión a internet se efectúe automáticamente a la red.
+  Estas tarjetas deben ser configuradas para que su conexión a internet se efectúe automáticamente a la red.
 	 <br><br>
   A continuación encuentras un [enlace](http://www.techmake.com/arduino-uno-wifi-intro) con la información necesaria para configurar tu Arduino UNO Wifi por primera vez
 	 <br><br>
 	Antes de continuar con la configuración, es importante que la tarjeta se encuentre con el Firmware actualizado. Puedes hacer la actualización siguiendo los pasos de este [tutorial](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin) 
 	 <br><br>
-  Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [enlace](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/)
-	
-
+  Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/)
   
-
-  
+    ## Configuración de la Raspberry Pi 3 ##
   
 
   ## Wiki ##
