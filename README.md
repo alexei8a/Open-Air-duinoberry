@@ -96,7 +96,11 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
    ## Configuración de la Raspberry Pi 3 ##
   Para comenzar a usar la tarjeta, es importante descarga el sistema operativo. En este caso, utilizamos _Raspbian_, un sistema operativo basado en _Debian_ que le da la _Raspberry_ la posibilidad de instalar _software_ que se utilizará para el desarrollo, tanto _back-end_ como _front-end_ de la aplicación _web_.
   <br><br>
-  El sitio _web_ oficial de _Raspberry_ ofrece un enlace para descargar la última versión de _Raspbian_ [Stretch](https://www.raspberrypi.org/downloads/raspbian/). Esta versión del sistema operativo se descargará en una tarjeta **micro SD clase 10** que será el disco duro del mini computador.
+  El sitio _web_ oficial de _Raspberry_ ofrece un enlace para descargar la última versión de  [_Raspbian_ Stretch](https://www.raspberrypi.org/downloads/raspbian/). Esta versión del sistema operativo se descargará en una tarjeta **micro SD clase 10** que será el disco duro del mini computador.
+  <br><br>
+  Después de tener el sistema operativo cargado en la _Raspberry_ se procede a hacer la instalación de las herramientas básicas para el desarrollo de la aplicación.
+  
+  
   
 
   ## Wiki ##
