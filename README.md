@@ -1,7 +1,9 @@
 <h1 align="center">
   Open-Air-duinoberry
 </h1>
+
 Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéneos
+
 <br><br>
 <p align="center">
   <img src="/nodeJS/sensores/public/img/airduinoberry.png">
