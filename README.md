@@ -103,9 +103,18 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   sudo apt-get update && sudo apt-get upgrade
   sudo apt-get install nodejs npm git
   ```
-  Con esas líneas de código, realizamos una actualización de la _Raspberry_ e instalamos _NodeJS_, su gestor de paquetes _npm_ y el controlador de versiones _git_.
+  Con esas líneas de código, realizamos una actualización de la _Raspberry_ e instalamos _NodeJS_, su gestor de paquetes _npm_, el controlador de versiones _git_.
   
-  
+  La instalación de la base de datos _MongoDB_ y el **broker MQTT** _Mosquitto_ se realizan con los siguientes comandos.
+
+  ```
+  sudo apt-get update && sudo apt-get upgrade
+  sudo apt-get install mongodb-server
+  sudo service mongod start
+  sudo apt-get install mosquitto
+  sudo apt-get install mosquitto-clients 
+  ```
+  De esta manera, la _Raspberry_ cuenta con el _software_ necesario para la implementación del sistema.
   
 
   ## Wiki ##
