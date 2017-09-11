@@ -12,8 +12,8 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
   - [Introducción](#introducción)
   - [Materiales](#materiales)
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
-  - [Configuración de las tarjetas Arduino UNO Wifi](#configuracion-de-las-tarjetas-arduino-uno-wifi)
-  - [Configuración Raspberry Pi 3](#configuracion-raspberry-pi-3)
+  - [Configuración de las tarjetas Arduino UNO Wifi](#configuración-de-las-tarjetas-arduino-uno-wifi)
+  - [Configuración Raspberry Pi 3](#configuración-de-la-raspberry-pi-3)
   - [¡Hora de celebrar!](#hora-de-celebrar)
   - [Wiki](#wiki)
   
@@ -95,7 +95,7 @@ Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librer�
   Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/) 
      <br><br>
  
-   ## Configuración Raspberry Pi 3 ##
+   ## Configuración de la Raspberry Pi 3 ##
   Hola
 
   ## Wiki ##
