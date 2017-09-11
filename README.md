@@ -123,7 +123,7 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   - **Módulo de registro de sensores y dispositivos**: se encuentra en la carpeta sensores
   - **Módulo de mediciones, envío de datos por MQTT y generación de alertas**: corresponde a la carpeta mqtt
   - **Módulo de visualización**: está disponible en la carpeta api
-  - **Sección de _hardware_**: contiene los códigos de programación de las tarjetas _Arduino_ y los esquemáticos realizados en _Fritzing_ para la conexión de los sensores
+  - **Configuración del _hardware_**: contiene los códigos de programación de las tarjetas _Arduino_ y los esquemáticos realizados en _Fritzing_ para la conexión de los sensores
   
   Los tres módulos de _software_ están disponibles en la carpeta nodeJS, mientras que la sección de _harware_ se ubica en la carpeta raíz del proyecto. El contenido de estos archivos y su funcionamiento, se explican detalladamente en la [_Wiki_](https://github.com/alexei8a/Open-Air-duinoberry/wiki) del proyecto.
   <br><br>
