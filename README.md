@@ -1,5 +1,5 @@
 <h1 align="center">
-  Open-Air-duinoberry
+  Open Air-duinoberry
 </h1>
 
 Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéneos
