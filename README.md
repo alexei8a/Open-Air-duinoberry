@@ -32,7 +32,10 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 <p align="justify">
   Para el desarrollo de este proyecto se utilizan los siguientes materiales:
   </p>
-  
+ 
+| Dispositivo |
+| ----- |
+| Arduino UNO Wifi |
 | Sensor| Cantidad| Variables medidas|
 | ----- | ---- | ---- |
 | MQ7 | 1 | Concentración de monóxido de carbono |
