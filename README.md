@@ -16,7 +16,7 @@ Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéne
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
   - [Configuración de las tarjetas Arduino UNO Wifi](#configuración-de-las-tarjetas-arduino-uno-wifi)
   - [Configuración Raspberry Pi 3](#configuración-de-la-raspberry-pi-3)
-  - [¡Descarga del respositorio!](#descarga-del-repositorio)
+  - [Descarga del respositorio y manos a la obra](#descarga-del-repositorio-y-manos-a-la-obra)
   - [Wiki](#wiki)
   
   ## Introducción ##
@@ -116,8 +116,15 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   ```
   De esta manera, la _Raspberry_ cuenta con el _software_ necesario para la implementación del sistema.
   
-  ## Descarga del repositorio ##
+  ## Descarga del repositorio y manos a la obra ##
   
+  Clona este repositorio en tu _Raspberry_ y podrás poner a funcionar los diferentes módulos del _software_ de este sistema:
+  
+  - **Módulo de registro de sensores y dispositivos**: se encuentra en la carpeta sensores
+  - **Módulo de mediciones MQTT y módulo de alertas**: corresponde a la carpeta mqtt
+  - **Módulo de visualización**: está disponible en la carpeta api
+  
+  Estos tres módulos, disponibles en la carpeta nodeJS, se explican detalladamente en la _Wiki_ del proyecto.
 
   ## Wiki ##
   
