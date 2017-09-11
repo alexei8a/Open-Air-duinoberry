@@ -75,7 +75,7 @@ Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
 | SFE_BMP180 |  BMP180 | https://github.com/LowPowerLab/SFE_BMP180 |
 | TinyGPSPlus |  GPS Neo-6m | https://github.com/mikalhart/TinyGPSPlus |
 
-Estas libreras deben ser añadidas al [Arduino IDE](https://www.arduino.cc/en/Main/Software) mediante el gestor de librerías 
+Estas libreras deben ser añadidas al [Arduino IDE](https://www.arduino.cc/en/Main/Software) mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`
 
   ## Configuración de las Arduino UNO Wifi ##
 
