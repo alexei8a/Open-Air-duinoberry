@@ -99,11 +99,11 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   El sitio _web_ oficial de _Raspberry_ ofrece un enlace para descargar la última versión de  [_Raspbian_ Stretch](https://www.raspberrypi.org/downloads/raspbian/). Esta versión del sistema operativo se descargará en una tarjeta **micro SD clase 10** que será el disco duro del mini computador.
   <br><br>
   Después de tener el sistema operativo cargado en la _Raspberry_ se procede a hacer la instalación de las herramientas básicas para el desarrollo de la aplicación. Para ello se abre una **terminal** en la que se escribirán los siguientes comandos:
-  <br><br>
   ```
-  sudo apt-get update
-  sudo apt-get install 
+  sudo apt-get update && sudo apt-get upgrade
+  sudo apt-get install nodejs npm git
   ```
+  Con esas líneas de código, realizamos una actualización de la _Raspberry_ e instalamos _NodeJS_, su gestor de paquetes _npm_ y el controlador de versiones _git_.
   
   
   
