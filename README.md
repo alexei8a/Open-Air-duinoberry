@@ -19,16 +19,14 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
   
   ## Introducción ##
 
-<p align="justify">
-  Esta es una iniciativa, basada en el software y el hardware libre, que hace interoperables los datos de sensores heterogéneos en el marco de Internet de las Cosas
+  Esta es una iniciativa, basada en el _software_  y el _hardware_ libre, que hace interoperables los datos de sensores heterogéneos en el marco de Internet de las Cosas
   <br><br>
-   Aquí se presenta un sistema de medición y monitoreo de algunas de las variables ambientales relacionadas con la calidad del aire, a saber: temperatura, humedad, presión atmosférica, densidad de polvo y concentraciones de monóxido y dióxido de carbono, metano y óxidos de nitrógeno. 
+   Aquí se presenta un sistema de medición y monitoreo de algunas de las variables ambientales relacionadas con la **_calidad del aire_**, a saber: **temperatura**, **humedad**, **presión atmosférica**, **densidad de polvo** y **concentraciones de monóxido y dióxido de carbono, metano y óxidos de nitrógeno**. 
    <br><br>
-Los datos capturados por los sensores son integrados mediante el microcontrolador central de una tarjeta Arduino, la cual establece comunicación Wifi con un servidor Web, embebido en una Raspberry Pi 3, que mediante el uso del protocolo MQTT y el entorno de ejecución para JavaScript, NodeJS, facilita la inserción de los datos en una base de datos de MongoDB, con la cual se interactúa desde el servidor utilizando el lenguaje de intercambio JSON para hacer interopreables los datos. 
+Los datos capturados por los sensores son integrados mediante el microcontrolador central de una tarjeta _Arduino_ la cual establece comunicación _Wifi_ con un servidor _Web_, embebido en una _Raspberry Pi 3_, que mediante el uso del protocolo _MQTT_ y el entorno de ejecución para _JavaScript_, _NodeJS_, facilita la inserción de los datos en una base de datos de _MongoDB_, con la cual se interactúa desde el servidor utilizando el lenguaje de intercambio _JSON_ para hacer interopreables los datos. 
    <br><br>
-Además, el servidor implementa métodos para el tratamiento y visualización de datos por medio de un cliente basado en un navegador Web, lo cual hace que sean visibles desde diversidad de dispositivos.
-  </p>
-  
+Además, el servidor implementa métodos para el tratamiento y visualización de datos por medio de un cliente basado en un navegador _Web_, lo cual hace que sean visibles desde diversidad de dispositivos.
+
   ## Materiales ##
 
   Para el desarrollo de este proyecto se utilizan los siguientes dispositivos:
@@ -42,7 +40,7 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 | Raspberry Pi 3 | Wifi | https://www.raspberrypi.org/products/raspberry-pi-3-model-b/ |
 
 
-Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
+Los siguientes sensores son conectados a la tarjeta _Arduino UNO Wifi I_
 
 | Sensor|  Variables medidas| Más info |
 | ----- | ---- | ---- |
@@ -50,7 +48,7 @@ Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
 | DHT11 | Temperatura y humedad relativa | http://www.micropik.com/PDF/dht11.pdf | 
 | BMP180 | Presión atmosférica y temperatura | https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf | 
 
-A continuación se muestran los sensores conectados a la tarjeta Arduino UNO Wifi II
+A continuación se muestran los sensores conectados a la tarjeta _Arduino UNO Wifi II_
 
 | Sensor|  Variables medidas| Más info |
 | ----- |  ---- | ---- |
@@ -58,7 +56,7 @@ A continuación se muestran los sensores conectados a la tarjeta Arduino UNO Wif
 | MQ135 |  Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco | https://www.olimex.com/Products/Components/Sensors/SNS-MQ135/resources/SNS-MQ135.pdf | 
 | GP2Y1010AU0F | Densidad de polvo | https://www.sparkfun.com/datasheets/Sensors/gp2y1010au_e.pdf | 
 
-Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
+Finalmente, el siguiente sensor se conecta a la tarjeta _Arduino UNO_
 
 | Sensor | Variables medidas| Más info |
 | ----- | ---- | ---- |
@@ -83,16 +81,15 @@ Para probar los sensores, se hace necesario crear unos pequeños programas en el
 Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`.
 
 
-
   ## Configuración de las tarjetas Arduino UNO Wifi ##
 
   Estas tarjetas deben ser configuradas para que su conexión a internet se efectúe automáticamente a la red.
 	 <br><br>
-  A continuación encuentras un [enlace](http://www.techmake.com/arduino-uno-wifi-intro) con la información necesaria para configurar tu Arduino UNO Wifi por primera vez
+  A continuación encuentras un [enlace](http://www.techmake.com/arduino-uno-wifi-intro) con la información necesaria para configurar tu _Arduino UNO Wifi_ por primera vez
 	 <br><br>
-	Antes de continuar con la configuración, es importante que la tarjeta se encuentre con el Firmware actualizado. Puedes hacer la actualización siguiendo los pasos de este [tutorial](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin) 
+	Antes de continuar con la configuración, es importante que la tarjeta se encuentre con el _Firmware_ actualizado. Puedes hacer la actualización siguiendo los pasos de este [tutorial](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin) 
 	 <br><br>
-  Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/) 
+  Posteriormente, debes configurar la conexión _MQTT_ de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/) 
      <br><br>
  
    ## Configuración de la Raspberry Pi 3 ##
