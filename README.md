@@ -33,12 +33,17 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   Para el desarrollo de este proyecto se utilizan los siguientes materiales:
   </p>
  
+<p align="center">
 | Dispositivo |
 | ----- |
 | Arduino UNO Wifi I |
 | Arduino UNO Wifi II |
 | Arduino UNO |
 | Raspberry pi 3 |
+
+</p>
+ 
+
 
 Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
 
