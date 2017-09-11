@@ -92,7 +92,7 @@ Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librer�
 	 <br><br>
   Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/) 
   
-  
+ 
    ## Configuración de la Raspberry Pi 3 ##
   
 
