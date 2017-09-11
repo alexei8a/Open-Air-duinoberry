@@ -34,12 +34,12 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   </p>
  
 
-| Dispositivo | Comunicación utilizada |
-| ----- | ----- |
-| Arduino UNO Wifi I | MQTT |
-| Arduino UNO Wifi II | MQTT |
-| Arduino UNO | Comunicación serial |
-| Raspberry pi 3 | Wifi |
+| Dispositivo | Comunicación utilizada | Más info |
+| ----- | ----- | ----- |
+| Arduino UNO Wifi I | MQTT | https://store.arduino.cc/usa/arduino-uno-wifi |
+| Arduino UNO Wifi II | MQTT | https://store.arduino.cc/usa/arduino-uno-wifi |
+| Arduino UNO | Comunicación serial | https://store.arduino.cc/usa/arduino-uno-rev3 |
+| Raspberry pi 3 | Wifi | https://www.raspberrypi.org/products/raspberry-pi-3-model-b/ |
 
 
 Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
