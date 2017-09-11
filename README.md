@@ -29,9 +29,9 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   </p>
   
   ## Materiales ##
-<p align="justify">
+
   Para el desarrollo de este proyecto se utilizan los siguientes dispositivos:
-  </p>
+  
  
 | Dispositivo | Comunicación utilizada | Más info |
 | ----- | ----- | ----- |
@@ -65,14 +65,13 @@ Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
 
   
   ## Requerimientos para los sensores ##
-<p align="justify">
+
 Para probar los sensores, se hace necesario crear unos pequeños programas en el entorno de desarrollo de Arduino que permitan visualizar los datos tomados en el puerto serial.
    <br><br>
-	Para mayor información sobre el entorno de programación de Arduino, puedes visitar el siguiente enlace:
-	https://www.arduino.cc/en/Guide/HomePage
+	Para mayor información sobre el entorno de programación de Arduino, puedes visitar el siguiente [enlace](	https://www.arduino.cc/en/Guide/HomePage)
    <br><br>
   Se hace necesario descargar algunas librerías de Arduino para el correcto funcionamiento de los sensores enunciados anteriormente.
-  </p>
+  
   
 | Librería | Sensor que la usa | Enlace para descargar |
 | ----- | ---- | ---- |
@@ -84,7 +83,7 @@ Estas libreras deben ser añadidas al [Arduino IDE](https://www.arduino.cc/en/Ma
 
   ## Configuración de las Arduino UNO Wifi ##
 
-<p align="justify">
+
   Esta tarjeta debe ser configurada para que su conexión a internet se efectúe automáticamente a la red.
 	 <br><br>
   A continuación encuentras un [enlace](http://www.techmake.com/arduino-uno-wifi-intro) con la información necesaria para configurar tu Arduino UNO Wifi por primera vez
@@ -93,7 +92,7 @@ Estas libreras deben ser añadidas al [Arduino IDE](https://www.arduino.cc/en/Ma
 	 <br><br>
   Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [enlace](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/)
 	
-  </p>
+
   
 
   
