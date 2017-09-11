@@ -8,7 +8,7 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
   <br><br>
 </p>
 
-# Tabla de contenido
+## Tabla de contenido ##
   - [Introducción](#introducción)
   - [GitHub Desktop](#github-desktop)
   - [Configura tu proyecto en GitHub Desktop](#configura-tu-proyecto-en-github-desktop)
@@ -20,7 +20,6 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
   ## Introducción ##
 
 <p align="justify">
-  <br><br>
   Esta es una iniciativa, basada en el software y el hardware libre, que hace interoperables los datos de sensores heterogéneos en el marco de Internet de las Cosas
   <br><br>
    Aquí se presenta un sistema de medición y monitoreo de algunas de las variables ambientales relacionadas con la calidad del aire, a saber: temperatura, humedad, presión atmosférica, densidad de polvo y concentraciones de monóxido y dióxido de carbono, metano y óxidos de nitrógeno. 
