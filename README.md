@@ -70,6 +70,14 @@ Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
   Para el correcto funcionamiento de los sensores, se hace necesario descargar algunas librerías de Arduino.
   </p>
   
+  
+  
+| Librería | Sensor que la usa | Enlace para descargar |
+| ----- | ---- | ---- |
+| SimpleDHT | DHT11 y DHT22 | https://github.com/winlinvip/SimpleDHT |
+| SFE_BMP180 |  BMP180 | https://github.com/LowPowerLab/SFE_BMP180 |
+
+  
   ## Wiki ##
   
 En este enlace encuentras la [Wiki con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
