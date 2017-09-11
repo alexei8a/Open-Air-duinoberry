@@ -80,7 +80,7 @@ Para probar los sensores, se hace necesario crear unos pequeños programas en el
 | SFE_BMP180 |  BMP180 | https://github.com/LowPowerLab/SFE_BMP180 |
 | TinyGPSPlus |  GPS Neo-6m | https://github.com/mikalhart/TinyGPSPlus |
 
-Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`
+Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`.
 
   ## Configuración de las Arduino UNO Wifi ##
 
@@ -90,7 +90,7 @@ Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librer�
 	 <br><br>
 	Antes de continuar con la configuración, es importante que la tarjeta se encuentre con el Firmware actualizado. Puedes hacer la actualización siguiendo los pasos de este [tutorial](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin) 
 	 <br><br>
-  Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/)
+  Posteriormente, debes configurar la conexión MQTT de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/) 
   
   
    ## Configuración de la Raspberry Pi 3 ##
