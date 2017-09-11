@@ -14,10 +14,10 @@ Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéne
   - [Introducción](#introducción)
   - [Materiales](#materiales)
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
-  - [Configuración de las tarjetas Arduino UNO Wifi](#configuración-de-las-tarjetas-arduino-uno-wifi)
-  - [Configuración Raspberry Pi 3](#configuración-de-la-raspberry-pi-3)
+  - [Configuración de las tarjetas _Arduino UNO Wifi_](#configuración-de-las-tarjetas-arduino-uno-wifi)
+  - [Configuración _Raspberry Pi 3_](#configuración-de-la-raspberry-pi-3)
   - [Descarga del respositorio y manos a la obra](#descarga-del-repositorio-y-manos-a-la-obra)
-  - [Wiki](#wiki)
+  - [_Wiki_](#wiki)
   
   ## Introducción ##
 
@@ -83,7 +83,7 @@ Para probar los sensores, se hace necesario crear unos pequeños programas en el
 Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de librerías** `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`.
 
 
-  ## Configuración de las tarjetas Arduino UNO Wifi ##
+  ## Configuración de las tarjetas _Arduino UNO Wifi_ ##
 
   Estas tarjetas deben ser configuradas para que su conexión a internet se efectúe automáticamente a la red.
 	 <br><br>
@@ -93,7 +93,7 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
 	 <br><br>
   Posteriormente, debes configurar la conexión _MQTT_ de la tarjeta como se muestra en el siguiente [link](https://www.trojanc.co.za/2017/02/08/arduino-uno-wifi-mqtt/) 
  
-   ## Configuración de la Raspberry Pi 3 ##
+   ## Configuración de la _Raspberry Pi 3_ ##
   Para comenzar a usar la tarjeta, es importante descarga el sistema operativo. En este caso, utilizamos _Raspbian_, un sistema operativo basado en _Debian_ que le da la _Raspberry_ la posibilidad de instalar _software_ que se utilizará para el desarrollo, tanto _back-end_ como _front-end_ de la aplicación _web_.
   <br><br>
   El sitio _web_ oficial de _Raspberry_ ofrece un enlace para descargar la última versión de  [_Raspbian_ Stretch](https://www.raspberrypi.org/downloads/raspbian/). Esta versión del sistema operativo se descargará en una tarjeta **micro SD clase 10** que será el disco duro del mini computador.
@@ -136,7 +136,7 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
    En este momento te encuentras listo para ejecutar por primera vez la aplicación, disfrútala.
   
 
-  ## Wiki ##
+  ## _Wiki_ ##
   
 En este enlace encuentras la [Wiki con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
 
