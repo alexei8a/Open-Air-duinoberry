@@ -10,7 +10,7 @@ Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéne
   <br><br>
 </p>
 
-## Tabla de contenido ##
+## Configuración del sistema ##
   - [Introducción](#introducción)
   - [Materiales](#materiales)
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
