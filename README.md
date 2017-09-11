@@ -33,7 +33,9 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   Para el desarrollo de este proyecto se utilizan los siguientes materiales:
   </p>
   
-  
+| TITULO1| TITULO2|
+| ----- | ---- |
+| CONTENIDO COLUMNA 1 | CONTENIDO COLUMNA 2 |
   
   
   ## Wiki ##
