@@ -138,7 +138,7 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
 
   ## _Wiki_ ##
   
-En este enlace encuentras la [Wiki con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
+En este enlace encuentras la [_Wiki_ con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
 
 
 
