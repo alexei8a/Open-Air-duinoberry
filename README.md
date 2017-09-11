@@ -44,11 +44,11 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 
 Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
 
-| Sensor|  Variables medidas|
-| ----- | ---- |
-| MQ7 |  Concentración de monóxido de carbono |
-| DHT11 | Temperatura y humedad relativa |
-| BMP180 | Presión atmosférica y temperatura |
+| Sensor|  Variables medidas| Más info |
+| ----- | ---- | ---- |
+| MQ7 |  Concentración de monóxido de carbono | https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-7.pdf | 
+| DHT11 | Temperatura y humedad relativa | http://www.micropik.com/PDF/dht11.pdf | 
+| BMP180 | Presión atmosférica y temperatura | https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf | 
 
 A continuación se muestran los sensores conectados a la tarjeta Arduino UNO Wifi II
 
