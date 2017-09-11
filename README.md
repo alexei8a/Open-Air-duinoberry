@@ -125,6 +125,15 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   - **Módulo de visualización**: está disponible en la carpeta api
   
   Estos tres módulos, disponibles en la carpeta nodeJS, se explican detalladamente en la _Wiki_ del proyecto.
+  <br><br>
+  Carga los códigos que encuentras en la carpeta _Arduino_ en tus tarjetas _Arduino UNO Wifi_ verificando que la _IP_ a la que se conectan tus sensores vía _MQTT_ y los nombres de los tópicos para las mediciones sean los deseados.
+  <br><br>
+  Conecta los sensores como se puede observar en los esquemas ubicados en la carpeta _Fritzing_. Si no cuentas con el programa puedes instalarlo, haciendo click [aquí](http://fritzing.org/download/).
+   <br><br>
+   Abre una **terminal** y mediante el uso de comandos `cd`, ve a cada una de las carpetas correspondientes a los módulos descritos anteriormente y ejecuta `npm install`, esto descargará todos los módulos y dependencias de _NodeJS_ que se utilizan en el proyecto desde las dependencias referenciadas en los archivos **package.json**
+   <br><br>
+   En este momento te encuentras listo para ejecutar por primera vez la aplicación, disfrútala.
+  
 
   ## Wiki ##
   
