@@ -10,7 +10,7 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 
 ## Tabla de contenido ##
   - [Introducción](#introducción)
-  - [GitHub Desktop](#github-desktop)
+  - [Wiki](#wiki)
   - [Configura tu proyecto en GitHub Desktop](#configura-tu-proyecto-en-github-desktop)
   - [Envía tu código a GitHub.com](#envía-tu-código-a-githubcom)
   - [Tomando código desde GitHub.com](#tomando-código-desde-githubcom)
@@ -29,9 +29,9 @@ Los datos capturados por los sensores son integrados mediante el microcontrolado
 Además, el servidor implementa métodos para el tratamiento y visualización de datos por medio de un cliente basado en un navegador Web, lo cual hace que sean visibles desde diversidad de dispositivos.
   </p>
   
-  ## GitHub Desktop ##
+  ## Wiki ##
   
-[Wiki con la documentación](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
+[Wiki con la documentación del proyecto](https://github.com/alexei8a/Open-Air-duinoberry/wiki)
 
 
 
