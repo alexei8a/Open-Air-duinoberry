@@ -1,7 +1,7 @@
 <h1 align="center">
   Open-Air-duinoberry
 </h1>
-Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
+Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéneos
 <br><br>
 <p align="center">
   <img src="/nodeJS/sensores/public/img/airduinoberry.png">
@@ -67,7 +67,7 @@ Finalmente, el siguiente sensor se conecta a la tarjeta _Arduino UNO_
 
 Para probar los sensores, se hace necesario crear unos pequeños programas en el entorno de desarrollo de Arduino que permitan visualizar los datos tomados en el puerto serial. [Descarga de Arduino IDE](https://www.arduino.cc/en/Main/Software).
    <br><br>
-	Para mayor información sobre el entorno de programación de Arduino y encontrar ejempĺos, puedes visitar el siguiente [enlace](	https://www.arduino.cc/en/Guide/HomePage)
+	Para mayor información sobre el entorno de programación de _Arduino_ y encontrar ejempĺos, puedes visitar el siguiente [enlace](	https://www.arduino.cc/en/Guide/HomePage)
    <br><br>
   También, se hace necesario descargar algunas librerías de Arduino para el correcto funcionamiento de los sensores enunciados anteriormente.
   
@@ -78,7 +78,7 @@ Para probar los sensores, se hace necesario crear unos pequeños programas en el
 | SFE_BMP180 |  BMP180 | https://github.com/LowPowerLab/SFE_BMP180 |
 | TinyGPSPlus |  GPS Neo-6m | https://github.com/mikalhart/TinyGPSPlus |
 
-Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librerías `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`.
+Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de librerías** `Programa->Incluir librería->Gestionar libreras` ó `Programa->Incluir librería->Añadir librería .zip`.
 
 
   ## Configuración de las tarjetas Arduino UNO Wifi ##
@@ -93,7 +93,7 @@ Estas libreras deben ser añadidas al Arduino IDE  mediante el gestor de librer�
      <br><br>
  
    ## Configuración de la Raspberry Pi 3 ##
-  Hola
+  
 
   ## Wiki ##
   
