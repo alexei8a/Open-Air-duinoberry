@@ -33,9 +33,15 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   Para el desarrollo de este proyecto se utilizan los siguientes materiales:
   </p>
   
-| TITULO1| TITULO2|
-| ----- | ---- |
-| CONTENIDO COLUMNA 1 | CONTENIDO COLUMNA 2 |
+| Sensor| Cantidad| Variables medidas|
+| ----- | ---- | ---- |
+| MQ7 | 1 | Concentración de monóxido de carbono |
+| DHT11 | 1 | Temperatura y humedad relativa |
+| BMP180 | 1 | Presión atmosférica y temperatura |
+
+| DHT22 | 1 | Temperatura y humedad relativa |
+| MQ135 | 1 | Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco |
+| GP2Y1010AU0F | 1 | Densidad de polvo |
   
   
   ## Wiki ##
