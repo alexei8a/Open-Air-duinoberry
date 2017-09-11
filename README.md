@@ -10,7 +10,7 @@ Sistema IoT que hace interoperables datos provenientes de sensores heterogéneos
 
 ## Tabla de contenido ##
   - [Introducción](#introducción)
-  - [Configura tu proyecto en GitHub Desktop](#configura-tu-proyecto-en-github-desktop)
+  - [Materiales](#materiales)
   - [Envía tu código a GitHub.com](#envía-tu-código-a-githubcom)
   - [Tomando código desde GitHub.com](#tomando-código-desde-githubcom)
   - [¡Hora de celebrar!](#hora-de-celebrar)
@@ -27,6 +27,10 @@ Los datos capturados por los sensores son integrados mediante el microcontrolado
    <br><br>
 Además, el servidor implementa métodos para el tratamiento y visualización de datos por medio de un cliente basado en un navegador Web, lo cual hace que sean visibles desde diversidad de dispositivos.
   </p>
+  
+  ## Materiales ##
+  
+  
   
   ## Wiki ##
   
