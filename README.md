@@ -29,6 +29,10 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   </p>
   
   ## Materiales ##
+<p align="justify">
+  Para el desarrollo de este proyecto se utilizan los siguientes materiales:
+  </p>
+  
   
   
   
