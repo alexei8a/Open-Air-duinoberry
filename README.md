@@ -35,7 +35,12 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
  
 | Dispositivo |
 | ----- |
-| Arduino UNO Wifi |
+| Arduino UNO Wifi I |
+| Arduino UNO Wifi II |
+| Arduino UNO |
+| Raspberry pi 3 |
+
+
 
 | Sensor| Cantidad| Variables medidas|
 | ----- | ---- | ---- |
