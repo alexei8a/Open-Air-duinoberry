@@ -118,11 +118,12 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   
   ## Descarga del repositorio y manos a la obra ##
   
-  Clona este repositorio en tu _Raspberry_ y podrás poner a funcionar los diferentes módulos del _software_ de este sistema:
+  Clona este repositorio en tu _Raspberry_ y podrás poner a funcionar los diferentes módulos del _software_ de este sistema, así como las instrucciones para poner a punto el _hardware_ utilizado:
   
   - **Módulo de registro de sensores y dispositivos**: se encuentra en la carpeta sensores
-  - **Módulo de mediciones MQTT y módulo de alertas**: corresponde a la carpeta mqtt
+  - **Módulo de mediciones, envío de datos por MQTT y generación de alertas**: corresponde a la carpeta mqtt
   - **Módulo de visualización**: está disponible en la carpeta api
+  - **Sección de _hardware_**: contiene los códigos de programación de las tarjetas _Arduino_ y los esquemáticos realizados en _Fritzing_ para la conexión de los sensores
   
   Estos tres módulos, disponibles en la carpeta nodeJS, se explican detalladamente en la _Wiki_ del proyecto.
   <br><br>
