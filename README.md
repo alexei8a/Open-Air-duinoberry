@@ -34,7 +34,7 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
   </p>
  
 | Dispositivo |
-| ----- |
+| ----- | ---- | ---- |
 | Arduino UNO Wifi |
 | Sensor| Cantidad| Variables medidas|
 | ----- | ---- | ---- |
