@@ -21,8 +21,8 @@ var crypto = require('crypto');
 var algorithm = 'aes-256-ctr';
 var password = 'd6F3Efeq';
 
-
-
+var pa="56d681c27824";
+var pa2=decrypt(pa);
 
 mailer.extend(app, {
 	from: "Alekos",
@@ -32,7 +32,7 @@ mailer.extend(app, {
 	transportMethod: "SMTP", // default is SMTP. Accepts anything that nodemailer accepts 
 	auth: {
 	user: "alexei8a@gmail.com", // email id
-	pass: "285295"  // password
+	pass: pa2  // password
 }
 });
 
@@ -50,6 +50,7 @@ function decrypt(text){
 			dec += decipher.final('utf8');
 	return dec;
 }
+
 
 app.set("view engine","jade");
 app.use("/public",express.static('public'));

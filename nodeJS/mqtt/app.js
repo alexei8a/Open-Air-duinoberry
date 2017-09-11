@@ -7,6 +7,28 @@ var mailer = require("express-mailer");
 var mqttUri  = "mqtt://localhost:1883";
 var client   = mqtt.connect(mqttUri);
 var deviceRoot = "arduinoUNOWifi";
+var crypto = require('crypto');
+var algorithm = 'aes-256-ctr';
+var password = 'd6F3Efeq';
+
+var pa="56d681c27824";
+var pa2=decrypt(pa);
+
+
+
+function encrypt(text){
+	var cipher = crypto.createCipher(algorithm,password)
+			var crypted = cipher.update(text,'utf8','hex')
+			crypted += cipher.final('hex');
+	return crypted;
+}
+
+function decrypt(text){
+	var decipher = crypto.createDecipher(algorithm,password)
+			var dec = decipher.update(text,'hex','utf8')
+			dec += decipher.final('utf8');
+	return dec;
+}
 
 
 var app=express();
@@ -23,7 +45,7 @@ app.set("view engine","jade");
       transportMethod: "SMTP", // default is SMTP. Accepts anything that nodemailer accepts 
       auth: {
         user: "alexei8a@gmail.com", // email id
-        pass: "285295"  // password
+        pass: pa2  // password
       }
     });
 
@@ -52,12 +74,36 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 	var collection = db.collection(key);
 	var valores = JSON.parse(payload);
 	
-	/*Alertas
 	
+	
+	generateAlert(key,valores);
+	
+	
+	
+	
+	 var collection2 = db.collection("sensors");
+	 collection2.findOne({title:key}, function(err,doc){
+	if(!err)
+	{
+  collection.update(  
+  { creator:doc._id },
+    {$push:  {values:valores, when:new Date() }}  ,
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
+});
+}}); 
+
+
+function generateAlert(key,valores){
 	if(key=="MQ7") 
 	{
 		var m=valores["CO"];
-		if(m>50){
+		if(m>30){
 		sendMailAlert("Exceso de monóxido de carbono en el aire",valores,key);
 	
 		}
@@ -100,27 +146,8 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 		sendMailAlert("Exceso de material particulado en el aire",valores,key);
 		}
 	}
-	
-	
-	Fin alertas*/
-	
-	 var collection2 = db.collection("sensors");
-	 collection2.findOne({title:key}, function(err,doc){
-	if(!err)
-	{
-  collection.update(  
-  { creator:doc._id },
-    {$push:  {values:valores, when:new Date() }}  ,
-  { upsert:true },
-  function(err,docs) {
-    if(err) { console.log("Insert fail"); } // Improve error handling
-  }
-  )
+	return;
 }
-});
-});
-}}); 
-
 
 function sendMailAlert(subj,data,key){
 	var values = JSON.stringify(data);

@@ -23,6 +23,7 @@
     "angular": "^1.6.6",
     "body-parser": "^1.17.2",
     "chart.js": "^2.6.0",
+    "crypto": "^1.0.1",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
     "express-mailer": "^0.3.1",
