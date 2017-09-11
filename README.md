@@ -125,7 +125,7 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   - **Módulo de visualización**: está disponible en la carpeta api
   - **Sección de _hardware_**: contiene los códigos de programación de las tarjetas _Arduino_ y los esquemáticos realizados en _Fritzing_ para la conexión de los sensores
   
-  Estos tres módulos, disponibles en la carpeta nodeJS, se explican detalladamente en la _Wiki_ del proyecto.
+  Los tres módulos de _software_ están disponibles en la carpeta nodeJS, mientras que la sección de _harware_ se ubica en la carpeta raíz del proyecto. El contenido de estos archivos y su funcionamiento, se explican detalladamente en la [_Wiki_](https://github.com/alexei8a/Open-Air-duinoberry/wiki) del proyecto.
   <br><br>
   Carga los códigos que encuentras en la carpeta _Arduino_ en tus tarjetas _Arduino UNO Wifi_ verificando que la _IP_ a la que se conectan tus sensores vía _MQTT_ y los nombres de los tópicos para las mediciones sean los deseados.
   <br><br>
