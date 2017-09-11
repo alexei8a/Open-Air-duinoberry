@@ -67,8 +67,10 @@ Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
   ## Requerimientos para los sensores ##
 <p align="justify">
 Para probar los sensores, se hace necesario crear unos pequeños programas en el entorno de desarrollo de Arduino que permitan visualizar los datos tomados en el puerto serial.
+   <br><br>
 	Para mayor información sobre el entorno de programación de Arduino, puedes visitar el siguiente enlace:
 	https://www.arduino.cc/en/Guide/HomePage
+   <br><br>
   Se hace necesario descargar algunas librerías de Arduino para el correcto funcionamiento de los sensores enunciados anteriormente.
   </p>
   
