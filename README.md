@@ -44,25 +44,25 @@ Además, el servidor implementa métodos para el tratamiento y visualización de
 
 Los siguientes sensores son conectados a la tarjeta Arduino UNO Wifi I
 
-| Sensor| Cantidad| Variables medidas|
-| ----- | ---- | ---- |
-| MQ7 | 1 | Concentración de monóxido de carbono |
-| DHT11 | 1 | Temperatura y humedad relativa |
-| BMP180 | 1 | Presión atmosférica y temperatura |
+| Sensor|  Variables medidas|
+| ----- | ---- |
+| MQ7 |  Concentración de monóxido de carbono |
+| DHT11 | Temperatura y humedad relativa |
+| BMP180 | Presión atmosférica y temperatura |
 
 A continuación se muestran los sensores conectados a la tarjeta Arduino UNO Wifi II
 
-| Sensor| Cantidad| Variables medidas|
-| ----- | ---- | ---- |
-| DHT22 | 1 | Temperatura y humedad relativa |
-| MQ135 | 1 | Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco |
-| GP2Y1010AU0F | 1 | Densidad de polvo |
+| Sensor|  Variables medidas|
+| ----- |  ---- |
+| DHT22 |  Temperatura y humedad relativa |
+| MQ135 |  Concentraciones de dióxido de carbono, óxidos de nitrógeno y amoniaco |
+| GP2Y1010AU0F | Densidad de polvo |
 
 Finalmente, el siguiente sensor se conecta a la Tarjeta Arduino UNO
 
-| Sensor| Cantidad| Variables medidas|
-| ----- | ---- | ---- |
-| GPS Neo-6M | 1 | Latitud y longitud |
+| Sensor | Variables medidas|
+| ----- | ---- |
+| GPS Neo-6M |  Latitud y longitud |
 
   
   
