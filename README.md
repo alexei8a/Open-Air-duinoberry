@@ -16,7 +16,7 @@ Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéne
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
   - [Configuración de las tarjetas Arduino UNO Wifi](#configuración-de-las-tarjetas-arduino-uno-wifi)
   - [Configuración Raspberry Pi 3](#configuración-de-la-raspberry-pi-3)
-  - [¡Hora de celebrar!](#hora-de-celebrar)
+  - [¡Descarga del respositorio!](#descarga-del-repositorio)
   - [Wiki](#wiki)
   
   ## Introducción ##
@@ -115,6 +115,8 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   sudo apt-get install mosquitto-clients 
   ```
   De esta manera, la _Raspberry_ cuenta con el _software_ necesario para la implementación del sistema.
+  
+  ## Descarga del repositorio ##
   
 
   ## Wiki ##
