@@ -1,3 +1,10 @@
+/**
+ * Description
+ * @method exports
+ * @param {} server
+ * @param {} sessionMidd
+ * @return 
+ */
 module.exports = function(server, sessionMidd){
 	var io = require ("socket.io")(server);
 	var redis = require("redis");

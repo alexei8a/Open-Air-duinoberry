@@ -1,6 +1,14 @@
 var Sensor = require("../models/sensors");
 var owner = require("./sensor_permission");
 
+/**
+ * Description
+ * @method exports
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ * @return 
+ */
 module.exports=function(req,res,next){
 	Sensor.findById(req.params.id)
 	.populate("creator")

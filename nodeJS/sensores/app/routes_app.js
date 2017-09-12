@@ -22,6 +22,12 @@ var dev_find_midd = require("../middlewares/find_device");
 
 
 
+/**
+ * Description
+ * @method encrypt
+ * @param {} text
+ * @return crypted
+ */
 function encrypt(text){
 	var cipher = crypto.createCipher(algorithm,password)
 			var crypted = cipher.update(text,'utf8','hex')
@@ -29,6 +35,12 @@ function encrypt(text){
 	return crypted;
 }
 
+/**
+ * Description
+ * @method decrypt
+ * @param {} text
+ * @return dec
+ */
 function decrypt(text){
 	var decipher = crypto.createDecipher(algorithm,password)
 			var dec = decipher.update(text,'hex','utf8')

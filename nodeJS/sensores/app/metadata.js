@@ -1,3 +1,9 @@
+/**
+ * Description
+ * @method selectMetadata
+ * @param {} sensorName
+ * @return metadata
+ */
 function selectMetadata(sensorName){
 	switch(sensorName)
 	{

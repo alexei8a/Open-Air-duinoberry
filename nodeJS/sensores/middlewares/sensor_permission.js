@@ -1,5 +1,13 @@
 var Sensor = require("../models/sensors");
 
+/**
+ * Description
+ * @method exports
+ * @param {} sensor
+ * @param {} req
+ * @param {} res
+ * @return Literal
+ */
 module.exports = function(sensor,req,res){
 	if(typeof sensor.creator=="undefined"){
 		return false;

@@ -16,6 +16,12 @@ var pa2=decrypt(pa);
 
 
 
+/**
+ * Description
+ * @method encrypt
+ * @param {} text
+ * @return crypted
+ */
 function encrypt(text){
 	var cipher = crypto.createCipher(algorithm,password)
 			var crypted = cipher.update(text,'utf8','hex')
@@ -23,6 +29,12 @@ function encrypt(text){
 	return crypted;
 }
 
+/**
+ * Description
+ * @method decrypt
+ * @param {} text
+ * @return dec
+ */
 function decrypt(text){
 	var decipher = crypto.createDecipher(algorithm,password)
 			var dec = decipher.update(text,'hex','utf8')
@@ -99,6 +111,13 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 }}); 
 
 
+/**
+ * Description
+ * @method generateAlert
+ * @param {} key
+ * @param {} valores
+ * @return 
+ */
 function generateAlert(key,valores){
 	if(key=="MQ7") 
 	{
@@ -149,6 +168,14 @@ function generateAlert(key,valores){
 	return;
 }
 
+/**
+ * Description
+ * @method sendMailAlert
+ * @param {} subj
+ * @param {} data
+ * @param {} key
+ * @return 
+ */
 function sendMailAlert(subj,data,key){
 	var values = JSON.stringify(data);
 	console.log(values);

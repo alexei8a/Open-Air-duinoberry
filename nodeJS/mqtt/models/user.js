@@ -4,7 +4,14 @@ var Schema=mongoose.Schema;
 mongoose.connect("mongodb://localhost/sensores",{useMongoClient: true });
 
 var email_match=[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"Coloca un Email válido" ];
-var password_validation={validator: function(p){
+var password_validation={
+/**
+ * Description
+ * @method validator
+ * @param {} p
+ * @return BinaryExpression
+ */
+validator: function(p){
 							return this.password_confirmation==p;
 							},
 							message: "Las contraseñas no son iguales"

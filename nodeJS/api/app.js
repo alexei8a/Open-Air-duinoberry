@@ -18,6 +18,12 @@ dbClient.connect(dbHost,function(err,db){
 	dbObject = db;
 });
 
+/**
+ * Description
+ * @method getDataMQ7
+ * @param {} responseObj
+ * @return 
+ */
 function getDataMQ7(responseObj){
 	dbObject.collection("MQ7").find({}).toArray(function(err, docs){
 	if( err ) throw err;
@@ -44,6 +50,13 @@ function getDataMQ7(responseObj){
 	responseObj.json(response);
 	});
 }
+/**
+ * Description
+ * @method getDataDHT
+ * @param {} responseObj
+ * @param {} sensor
+ * @return 
+ */
 function getDataDHT(responseObj,sensor){
 	dbObject.collection(sensor).find({}).toArray(function(err, docs){
 	if( err ) throw err;
@@ -73,6 +86,12 @@ function getDataDHT(responseObj,sensor){
 	responseObj.json(response);
 	});
 }
+/**
+ * Description
+ * @method getDataBMP180
+ * @param {} responseObj
+ * @return 
+ */
 function getDataBMP180(responseObj){
 	dbObject.collection('BMP180').find({}).toArray(function(err, docs){
 	if( err ) throw err;
@@ -103,6 +122,12 @@ function getDataBMP180(responseObj){
 	});
 }
 
+/**
+ * Description
+ * @method getDataGP2Y1010AU0F
+ * @param {} responseObj
+ * @return 
+ */
 function getDataGP2Y1010AU0F(responseObj){
 	dbObject.collection("GP2Y1010AU0F").find({}).toArray(function(err, docs){
 	if( err ) throw err;
@@ -130,6 +155,12 @@ function getDataGP2Y1010AU0F(responseObj){
 }
 
 
+/**
+ * Description
+ * @method getDataMQ135
+ * @param {} responseObj
+ * @return 
+ */
 function getDataMQ135(responseObj){
 	dbObject.collection("MQ135").find({}).toArray(function(err, docs){
 	if( err ) throw err;
@@ -166,6 +197,12 @@ function getDataMQ135(responseObj){
 
 
 
+/**
+ * Description
+ * @method getDataGPS
+ * @param {} responseObj
+ * @return 
+ */
 function getDataGPS(responseObj){
 	dbObject.collection("devices").find({"title":"Arduino UNO"}).toArray(function(err, docs){
 	if( err ) throw err;

@@ -1,6 +1,11 @@
 var lat;
 var lng;
 
+/**
+ * Description
+ * @method initMap
+ * @return 
+ */
 function initMap() {
 	var un = {lat: lat, lng: lng};
 	var map = new google.maps.Map(document.getElementById("map"), {
@@ -22,6 +27,12 @@ $(function(){
     url: 'http://192.168.0.77:3300/getGPS',
     type: 'GET',
     
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn2
+     * @return 
+     */
     success : function(dataIn2) {
 			 lat = dataIn2["lat"];
 			 lng = dataIn2["lng"];
@@ -45,6 +56,11 @@ var myLineChartBMP180T;
 var myLineChartGP2Y1010AU0F;
 var myLineChartMQ135;
 
+/**
+ * Description
+ * @method getDatos
+ * @return 
+ */
 function getDatos(){
 	
 	$(function(){
@@ -52,6 +68,12 @@ function getDatos(){
 
     url: 'http://192.168.0.77:3300/getMQ7',
     type: 'GET',
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn
+     * @return 
+     */
     success : function(dataIn) {
 		console.log(dataIn);
 			var canvas = document.getElementById('myChartMQ7');			
@@ -135,6 +157,12 @@ $(function(){
 
     url: 'http://192.168.0.77:3300/getDHT11',
     type: 'GET',
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn
+     * @return 
+     */
     success : function(dataIn) {
 		console.log(dataIn);
 			var canvas = document.getElementById('myChartDHT11');
@@ -241,6 +269,12 @@ $(function(){
 
     url: 'http://192.168.0.77:3300/getDHT22',
     type: 'GET',
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn
+     * @return 
+     */
     success : function(dataIn) {
 		console.log(dataIn);
 			var canvas = document.getElementById('myChartDHT22');
@@ -345,6 +379,12 @@ $(function(){
 
     url: 'http://192.168.0.77:3300/getBMP180',
     type: 'GET',
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn
+     * @return 
+     */
     success : function(dataIn) {
 		console.log(dataIn);
 			var canvasP = document.getElementById('myChartBMP180P');
@@ -488,6 +528,12 @@ $(function(){
 
     url: 'http://192.168.0.77:3300/getGP2Y1010AU0F',
     type: 'GET',
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn
+     * @return 
+     */
     success : function(dataIn) {
 		console.log(dataIn);
 			var canvas = document.getElementById('myChartGP2Y1010AU0F');
@@ -573,6 +619,12 @@ $(function(){
 
     url: 'http://192.168.0.77:3300/getMQ135',
     type: 'GET',
+    /**
+     * Description
+     * @method success
+     * @param {} dataIn
+     * @return 
+     */
     success : function(dataIn) {
 		console.log(dataIn);
 			var canvas = document.getElementById('myChartMQ135');

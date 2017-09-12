@@ -1,6 +1,14 @@
 var Device = require("../models/devices");
 var owner = require("./device_permission");
 
+/**
+ * Description
+ * @method exports
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ * @return 
+ */
 module.exports=function(req,res,next){
 	Device.findById(req.params.id)
 	.populate("creator")
