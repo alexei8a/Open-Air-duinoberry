@@ -17,7 +17,7 @@ function selectMetadata(sensorName){
 		break;
 	case "BMP180":
 	case "bmp180":
-		var	metadata={"field1":"presión", "unit1":"hPa",  "accuracy1":"+/-0.01 hPa", "principle1":"piezo-resistivo","field2":"temperatura", "unit2":"celsius", "accuracy2":"+/-0.1C", "principle2":"resistivo", "supplyVoltage":"3.3V"};
+		var	metadata={"field1":"presión", "unit1":"hPa",  "accuracy1":"+/-0.12 hPa", "principle1":"piezo-resistivo","field2":"temperatura", "unit2":"celsius", "accuracy2":"+/-0.5C", "principle2":"resistivo", "supplyVoltage":"3.3V"};
 		break;
 	case "MQ7":
 	case "mq7":
