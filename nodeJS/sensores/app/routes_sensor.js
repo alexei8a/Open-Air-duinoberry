@@ -31,7 +31,9 @@ router.get("/:id/sensors/:id/edit",function(req,res){
 	res.render("app/devices/sensors/edit");
 });
 
-
+router.get("/:id/sensors/:id/show",function(req,res){
+	res.render("app/devices/sensors/show")
+});
 
 router.route("/:id/sensorlist")
 .get(function(req,res){

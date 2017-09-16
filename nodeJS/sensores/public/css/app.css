@@ -2,6 +2,10 @@
 	margin-right: 1em;
 }
 
+.right-space3{
+	margin-right: 1.3em;
+}
+
 .right-space2{
 	margin-right: 3em;
 }
@@ -14,12 +18,20 @@
 	margin-left: 2.5em;
 }
 
+.mini-left-space2{
+	margin-left: 1.2em;
+}
+
 .mini-left-space{
 	margin-left: 1em;
 }
 
 .left-space{
 	margin-left: 53em;
+}
+
+.left-space3{
+	margin-left: 57em;
 }
 
 .giant-left-space{

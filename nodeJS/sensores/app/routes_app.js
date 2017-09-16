@@ -92,11 +92,18 @@ router.get("/devices/new",function(req,res){
 });
 
 
+
+
+
 router.all("/devices/:id*",dev_find_midd);
 
 
 router.get("/devices/:id/edit",function(req,res){
 	res.render("app/devices/edit");
+});
+
+router.get("/devices/:id/show",function(req,res){
+	res.render("app/devices/show")
 });
 
 router.route("/devices/:id")

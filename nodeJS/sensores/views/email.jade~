@@ -10,7 +10,7 @@ body
       | Esta es una iniciativa, basada en el software y el hardware libre, que busca hacer interoperables los datos de sensores heterogéneos en el ámbito de Internet de las Cosas
       br
       | Te agradecemos por utilizar esta aplicación y esperamos que sigamos construyendo en comunidad.
-    p Puedes revisar la documentación sobre el proyecto en:
+    p Puedes revisar la siguiente documentación sobre el proyecto:
     p 
     ol
       li  #[a(href="http://github.com") Registro de dispositivos y sensores]  

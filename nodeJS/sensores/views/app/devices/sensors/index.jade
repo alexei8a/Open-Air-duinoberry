@@ -3,18 +3,20 @@ block contenido
 	div(class="container top-space remove-float mx-auto text-center") 
 		h1 Mis Sensores en #{device.title}
 	div(class="container top-space")
-		img(src="/public/img/edit.png",class="left-space",class="big-right-space") 
+		img(class="left-space",src="/public/img/search.png") 
+		img(src="/public/img/edit.png",class="mid-left-space") 
 		img(src="/public/img/delete.png",class="mid-left-space") 
 		div(id="sensors")
 		for sensor in sensors
 			.white.border.tr.large-padding
-				.row
+				.row 
 					.col-md-9
 						h3=sensor.title
 					.col-md-3
-						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/edit",class="big-right-space") Editar
+						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/show",class="right-space mini-left-space") Info
+						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/edit",class="right-space mid-left-space") Editar
 						form(action="/app/devices/#{device._id}/sensors/#{sensor._id}?_method=DELETE",class="link", method="POST") 
-							input(type="submit",value="Eliminar",class="mid-left-space")
+							input(type="submit",value="Eliminar",class="mini-left-space")
 		div
 			a(href="/app/devices/#{device._id}/sensors/new",class="left-space3",class="right-space",style="font-size: large") Crear nuevo sensor
 			a(href="/app/devices/#{device._id}/sensors",style="font-size: large") Volver

@@ -3,21 +3,20 @@ block contenido
 	div(class="container top-space remove-float mx-auto text-center") 
 		h1 Mis Dispositivos
 	div(class="container top-space")
-		img(class="left-space3",src="/public/img/sensor4.png") 
-		img(class="mid-left-space",src="/public/img/search.png") 
+		img(class="left-space",src="/public/img/search.png") 
 		img(src="/public/img/edit.png",class="mid-left-space") 
-		img(src="/public/img/delete.png",class="mid-left-space") 
+		img(src="/public/img/delete.png",class="mini-left-space") 
 		div(id="devices")
 		for device in devices
 			.white.border.tr.large-padding
 				.row
-					.col-md-8
+					.col-md-9
 						h3=device.title
-					.col-md-4
+					.col-md-3
 						a(href="/app/devices/#{device._id}/sensors",class="right-space") Sensores
-						a(href="/app/devices/#{device._id}/show",class="mid-left-space") Info
-						a(href="/app/devices/#{device._id}/edit",class="mid-left-space right-space") Editar
-						form(action="/app/devices/#{device._id}?_method=DELETE",class="link mini-left-space2", method="POST") 
+						a(href="/app/devices/#{device._id}/show",class="right-space") Info
+						a(href="/app/devices/#{device._id}/edit",class="right-space") Editar
+						form(action="/app/devices/#{device._id}?_method=DELETE",class="link", method="POST") 
 							input(type="submit",value="Eliminar")
 		div
 			a(href="/app/devices/new",class="left-space3", style="font-size: large") Crear nuevo dispositivo
