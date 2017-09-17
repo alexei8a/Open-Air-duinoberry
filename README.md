@@ -123,10 +123,8 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   sudo apt-get install mosquitto-clients 
   ```
   
-  <br><br>
 <p align="center">
   <img src="https://github.com/alexei8a/Open-Air-duinoberry/blob/master/Screenshots/versiones.png">
-  <br><br>
 </p>
   
   De esta manera, la _Raspberry_ cuenta con el _software_ necesario para la implementación del sistema.
