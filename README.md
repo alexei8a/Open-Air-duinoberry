@@ -140,6 +140,8 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   <p align="center">
   <img src="https://github.com/alexei8a/Open-Air-duinoberry/blob/master/Screenshots/versiones.png">
 </p>
+
+Con la finalidad de acceder siempre a la _Raspberry_ mediante la misma dirección, se configura una _IP_ estática de acuerdo al siguiente [tutorial](https://www.vichaunter.org/como-se-hace/configurar-raspberry-pi-ip-fija-lan-wifi).
   
   
   ## Descarga del repositorio y manos a la obra ##
