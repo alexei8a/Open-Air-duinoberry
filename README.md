@@ -123,10 +123,6 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
   sudo apt-get install mosquitto-clients 
   ```
   
-<p align="center">
-  <img src="https://github.com/alexei8a/Open-Air-duinoberry/blob/master/Screenshots/versiones.png">
-</p>
-  
   De esta manera, la _Raspberry_ cuenta con el _software_ necesario para la implementación del sistema.
   <br><br>
   _MongoDB_ se inicia automáticamente al entrar al sistema operativo. Por el contrario _Mosquitto_ necesita ser configurado para iniciarse al acceder al sistema, mediante un _script_ que se encuentra disponible en el siguiente [enlace](https://gist.github.com/DaveThw/4396124291bb4f92b427)
@@ -134,13 +130,16 @@ Estas libreras deben ser añadidas al _Arduino IDE_  mediante el **gestor de lib
     En este momento, puedes revisar las versiones de cada uno de los programas instalados mediante los siguientes comandos
   
   ```
-  node -v
+  mosquitto -v
   npm -v
-  mongo --version
-  mosquitto -h
+  node -v
   git --version
+  mongo --version
    ```
   
+  <p align="center">
+  <img src="https://github.com/alexei8a/Open-Air-duinoberry/blob/master/Screenshots/versiones.png">
+</p>
   
   
   ## Descarga del repositorio y manos a la obra ##
