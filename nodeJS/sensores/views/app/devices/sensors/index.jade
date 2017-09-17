@@ -13,8 +13,8 @@ block contenido
 					.col-md-9
 						h3=sensor.title
 					.col-md-3
-						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/show",class="right-space mini-left-space") Info
-						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/edit",class="right-space mid-left-space") Editar
+						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/show",class="mini-left-space mini-right-space") Info
+						a(href="/app/devices/#{device._id}/sensors/#{sensor._id}/edit",class="right-space3 mid-left-space") Editar
 						form(action="/app/devices/#{device._id}/sensors/#{sensor._id}?_method=DELETE",class="link", method="POST") 
 							input(type="submit",value="Eliminar",class="mini-left-space")
 		div

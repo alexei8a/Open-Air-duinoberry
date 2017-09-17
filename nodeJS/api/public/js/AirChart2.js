@@ -41,8 +41,6 @@ $(function(){
 			$.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAnf7WL7wn3uahR-g68sVJ4CjubysB9KQU&callback=initMap");
 
 
-
-
 	}
 	
 })});
