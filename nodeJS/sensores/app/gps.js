@@ -15,9 +15,8 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 	else{	
 	var collection = db.collection("locations");
   collection.update(  
-  { _id: "locations"}, //
-  { _id: "locations", name : "Ubicación", desciption:"Posición inicial del sistema", encodingType : "WGS84", location:{lat:pos[0], lng:pos[1]} },
-    //{$push:  { location:{lat:pos[0], lng:pos[1]}}} ,
+  { _id: "locations", name : "Ubicaciones", desciption:"Posiciones históricas del sistema", encodingType : "WGS84"},
+    {$push:  { location:{lat:pos[0], lng:pos[1]}}} ,
   { upsert:true },
   function(err,docs) {
     if(err) { console.log("Insert fail"); } // Improve error handling
@@ -25,6 +24,26 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
   )
 }
 });
+
+
+mongodb.MongoClient.connect(mongoUri, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("lastlocation");
+  collection.update(  
+  { _id: "location"}, //
+  { _id: "location", name : "Ubicación", desciption:"Posición inicial del sistema", encodingType : "WGS84", location:{lat:pos[0], lng:pos[1]} },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
+ 
  
 
 
@@ -42,10 +61,10 @@ board.on("ready", function() {
     var lng=this.longitude;
     console.log("  longitude  : ", lng);
     console.log("--------------------------------------");
-    posAux=[lat,lng];
+    pos=[lat,lng];
   });
  
- console.log(posAux);
+ console.log(pos);
  
  
 });
