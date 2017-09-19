@@ -7,6 +7,7 @@ block contenido
 			p Ubicado en #{device.title}
 			p Es un sensor #{sensor.type}
 			p Tiene una #{sensor.signal} como salida
+			p Su descripción es #{sensor.description}
 			pre Sus metadatos son #{JSON.stringify(sensor.metadata,undefined,4)}
 		div
 			a(href="/app/devices/#{device._id}/sensorlist") Ver mis sensores

@@ -15,6 +15,7 @@ var lng=gps.pos[1];
 console.log(lng);
 
 
+
 var client = redis.createClient();
 
 
@@ -93,8 +94,6 @@ router.get("/devices/new",function(req,res){
 
 
 
-
-
 router.all("/devices/:id*",dev_find_midd);
 
 
@@ -114,6 +113,10 @@ router.route("/devices/:id")
 .put(function(req,res){
 	res.locals.device.title=req.body.title;
 	res.locals.device.comm_protocol=req.body.comm_protocol;
+	res.locals.device.description=req.body.description;
+	var prop = require("./properties");
+	var proper= prop.selectProperties(res.locals.device.title);
+	res.locals.device.properties=proper; //
 	res.locals.device.lat=lat; //
 	res.locals.device.lng=lng; //
 	res.locals.device.save(function(err){
@@ -152,9 +155,13 @@ router.route("/devices")
 	var data={
 			title: req.body.title,
 			creator: res.locals.user._id,
-			comm_protocol: req.body.comm_protocol
+			comm_protocol: req.body.comm_protocol,
+			description:req.body.description,			
 	}
 	var device = new Device(data);
+	var prop = require("./properties");
+	var proper= prop.selectProperties(device.title);
+	device.properties=proper; //
 	device.lat=lat; //
 	device.lng=lng; //
 	device.save(function(err){
@@ -163,6 +170,8 @@ router.route("/devices")
 					"id": device._id,
 					"title": device.title,
 					"comm_protocol": device.comm_protocol,
+					"properties": device.properties,
+					"location": device.location,
 					"lat": device.lat,
 					"lng": device.lng,
 					"creator": device.creator

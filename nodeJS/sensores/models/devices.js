@@ -5,6 +5,8 @@ var Schema = mongoose.Schema;
 var dev_schema= new Schema({
 	title: {type:String, required:true},
 	comm_protocol: {type:String, required:true},
+	description: {type:String},
+	properties: {type:Schema.Types.Mixed},
 	creator: {type:Schema.Types.ObjectId, ref:"User"},
 	lat: {type:Number, required:true},
 	lng: {type:Number, required:true},

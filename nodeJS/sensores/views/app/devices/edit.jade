@@ -8,10 +8,14 @@ block contenido
 				label(for="title") Nombre
 				input(type="text",name="title",placeholder="Nombre del dispositivo...",id="title",class="form-control")
 			div
+				label(for="description") Descripción
+				input(type="text",name="description",placeholder="Descripción del dispositivo...",id="description",class="form-control")
+			div
 				label(for="comm_protocol") Protocolo de comunicación
 				select(name="comm_protocol",class="form-control") 
 					option(value="MQTT") MQTT
 					option(value="Bluetooth") Bluetooth
+					option(value="Comunicación serial") Comunicación serial
 			div(class="row top-space")
 				div(class="col-xs-12 col-sm-6")
 					input(type="submit" value="Guardar" class="btn btn-info")

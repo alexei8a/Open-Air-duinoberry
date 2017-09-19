@@ -4,6 +4,7 @@ var router = express.Router();
 var redis = require("redis");
 var client = redis.createClient();
 var flash = require("express-flash");
+var observed = require("./observed");
 
 var sen_find_midd = require("../middlewares/find_sensor");
 
@@ -48,6 +49,7 @@ router.route("/:id/sensorlist")
 	res.locals.sensor.title=req.body.title;
 	res.locals.sensor.type=req.body.type;
 	res.locals.sensor.signal=req.body.signal;
+	res.locals.sensor.description=req.body.description;
 	var met = require("./metadata");
 	var meta= met.selectMetadata(res.locals.sensor.title);
 	res.locals.sensor.metadata=meta;
@@ -91,6 +93,7 @@ router.route("/:id/sensors")
 			type: req.body.type,
 			creator: res.locals.device._id,
 			signal: req.body.signal,
+			description:req.body.description,
 	}
 
 
@@ -106,6 +109,7 @@ router.route("/:id/sensors")
 			var senJSON={
 					"id": sensor._id,
 					"title": sensor.title,
+					"description": sensor.description,
 					"type": sensor.type,
 					"creator": sensor.creator,
 					"signal": sensor.signal,
@@ -141,6 +145,7 @@ router.route("/:id/sensors/:id")
 	res.locals.sensor.title=req.body.title;
 	res.locals.sensor.type=req.body.type;
 	res.locals.sensor.signal=req.body.signal;
+	res.locals.sensor.description=req.body.description;
 	var met = require("./metadata");
 	var meta= met.selectMetadata(res.locals.sensor.title);
 	res.locals.sensor.metadata=meta;
