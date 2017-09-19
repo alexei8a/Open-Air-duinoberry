@@ -6,8 +6,8 @@ block contenido
 		if(typeof device.creator != "undefined")
 			p Creado por #{device.creator.name}
 			p Se comunica mendiante el protocolo #{device.comm_protocol}
-			p Su descripción es #{device.description}
-			p Su Posición es {"lat":#{device.lat}, "lng":#{device.lng}}
-			p Sus sensores asociados son  #{JSON.stringify(device.properties,undefined,4)}
+			p Su descripción es: #{device.description}
+			p Su Posición es: {"lat":#{device.lat}, "lng":#{device.lng}}
+			p Los sensores asociados a este dispositivo son:  #{JSON.stringify(device.properties,undefined,4)}
 		div
 			a(href="/app/devices") Ver mis dispositivos
