@@ -4,7 +4,9 @@ var router = express.Router();
 var redis = require("redis");
 var client = redis.createClient();
 var flash = require("express-flash");
-var observed = require("./observed");
+var observed = require("./observedProperties");
+var observation = require("./observation");
+var datastream = require("./datastream");
 
 var sen_find_midd = require("../middlewares/find_sensor");
 
@@ -22,7 +24,6 @@ router.get("/:id/sensors",function(req,res){
 router.get("/:id/sensors/new",function(req,res){
 	res.render("app/devices/sensors/new")
 });
-
 
 
 router.all("/:id/sensors/:id*",sen_find_midd);
