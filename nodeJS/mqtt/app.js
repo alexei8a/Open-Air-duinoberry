@@ -1,4 +1,3 @@
-
 var mongodb  = require("mongodb");
 var mqtt     = require("mqtt");
 var Sensor= require("./models/sensors");
@@ -72,6 +71,26 @@ client.on("connect", function () {
 });
 
 var mongoUri = "mongodb://localhost:27017/sensores";
+var feature;
+
+mongodb.MongoClient.connect(mongoUri, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("feature");
+  
+  	 collection.findOne({_id:"Feature of Interest"}, function(err,doc){
+	if(!err)
+	{
+	feature=doc;
+}
+}); 
+}
+});
+
+
 
 mongodb.MongoClient.connect(mongoUri, function(err, db) {
     if(err) {
@@ -98,8 +117,8 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 	if(!err)
 	{
   collection.update(  
-  { creator:doc._id },
-    {$push:  {values:valores, when:new Date() }}  ,
+  { creator:doc._id , featureOfInteres:feature },
+    {$push:  {result:valores, resultTime:new Date() }}  ,
   { upsert:true },
   function(err,docs) {
     if(err) { console.log("Insert fail"); } // Improve error handling

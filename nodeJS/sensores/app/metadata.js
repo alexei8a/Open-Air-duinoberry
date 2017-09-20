@@ -33,7 +33,7 @@ function selectMetadata(sensorName){
 		break;
 	case "GPS Neo-6M":
 	case "gps neo-6m":
-		var	metadata={"field":"ubicación (latitud-longitud)", "unit":"m",  "accuracy":"3 m", "principle":"Comunicación satelital","canales":"50", "update frequency":"5Hz", "interfaces":"UART, USB, SPI", "dynamics":"si", "format":"grados decimales", "supplyVoltage":"3.3V"};
+		var	metadata={"field":"ubicación (latitud-longitud)", "unit":"m",  "accuracy":"+/- 3 m", "principle":"Comunicación satelital","canales":"50", "update frequency":"5Hz", "interfaces":"UART, USB, SPI", "dynamics":"si", "format":"grados decimales", "supplyVoltage":"3.3V"};
 		break;
 
 	default: 

@@ -7,6 +7,7 @@ var crypto = require('crypto');
 var algorithm = 'aes-256-ctr';
 var password = 'd6F3Efeq';
 var gps = require("./gps");
+var mongodb  = require("mongodb");
 
 
 var lat=gps.pos[0];
@@ -20,6 +21,43 @@ var client = redis.createClient();
 
 
 var dev_find_midd = require("../middlewares/find_device");
+var mongoUri = "mongodb://localhost:27017/sensores";
+var location;
+var historicalLocation;
+
+mongodb.MongoClient.connect(mongoUri, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("lastlocation");
+  
+  	 collection.findOne({_id:"location"}, function(err,doc){
+	if(!err)
+	{
+	location=doc;
+}
+}); 
+}
+});
+
+mongodb.MongoClient.connect(mongoUri, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("locations");
+  
+  	 collection.findOne({_id:"historical locations"}, function(err,doc){
+	if(!err)
+	{
+	historicalLocation=doc;
+}
+}); 
+}
+});
 
 
 
@@ -116,6 +154,8 @@ router.route("/devices/:id")
 	res.locals.device.description=req.body.description;
 	var prop = require("./properties");
 	var proper= prop.selectProperties(res.locals.device.title);
+	res.locals.device.location=location;
+	//res.locals.device.historicalLocation=historicalLocation;
 	res.locals.device.properties=proper; //
 	res.locals.device.lat=lat; //
 	res.locals.device.lng=lng; //
@@ -161,6 +201,8 @@ router.route("/devices")
 	var device = new Device(data);
 	var prop = require("./properties");
 	var proper= prop.selectProperties(device.title);
+	device.location=location;
+	//device.historicalLocation=historicalLocation;
 	device.properties=proper; //
 	device.lat=lat; //
 	device.lng=lng; //
@@ -174,7 +216,9 @@ router.route("/devices")
 					"location": device.location,
 					"lat": device.lat,
 					"lng": device.lng,
-					"creator": device.creator
+					"creator": device.creator,
+					"location": device.location,
+					//"historicalLocation": device.historicalLocation
 			};
 
 			client.publish("devices",JSON.stringify(devJSON));

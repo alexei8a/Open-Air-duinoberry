@@ -15,7 +15,7 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 	else{	
 	var collection = db.collection("locations");
   collection.update(  
-  { _id: "locations", name : "Ubicaciones", desciption:"Posiciones históricas del sistema", encodingType : "WGS84"},
+  { _id: "historical locations", name : "Ubicaciones", desciption:"Posiciones históricas del sistema", encodingType : "WGS84"},
     {$push:  { location:{lat:pos[0], lng:pos[1]}}} ,
   { upsert:true },
   function(err,docs) {

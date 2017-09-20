@@ -8,6 +8,8 @@ var dev_schema= new Schema({
 	description: {type:String},
 	properties: {type:Schema.Types.Mixed},
 	creator: {type:Schema.Types.ObjectId, ref:"User"},
+	location:  {type:Schema.Types.Mixed},
+	historicalLocations: {type:Schema.Types.Mixed},
 	lat: {type:Number, required:true},
 	lng: {type:Number, required:true},
 });
