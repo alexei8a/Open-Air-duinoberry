@@ -225,8 +225,8 @@ function getDataBMP180(responseObj){
  * @return 
  */
 function getDataGP2Y1010AU0F(responseObj){
-	observedGP2Y1010Au0F=observed;
-	observedGP2Y1010Au0F.name=["densidad de polvo"];
+	observedGP2Y1010AU0F=observed;
+	observedGP2Y1010AU0F.name=["densidad de polvo"];
 	dbObject.collection("GP2Y1010AU0F").find({}).toArray(function(err, docs){
 	if( err ) throw err;
 	var timesArray=[];
@@ -247,7 +247,7 @@ function getDataGP2Y1010AU0F(responseObj){
         "description" : "medición de densidad de polvo en el aire",
         "unitOfMeasurement": "mg/m3",
         "sensor": "GP2Y1010Au0F",
-        "observedProperty": observedBMP180,
+        "observedProperty": observedGP2Y1010AU0F,
         "observationType": "periódica",
         "data" : valuesArray,
         "categories" : timesArray

@@ -34,8 +34,8 @@ $(function(){
      * @return 
      */
     success : function(dataIn2) {
-			 lat = dataIn2["lat"];
-			 lng = dataIn2["lng"];
+			 lat = dataIn2['dataset']["lat"];
+			 lng = dataIn2['dataset']["lng"];
 			console.log(lat);
 			console.log(lng);
 			$.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAnf7WL7wn3uahR-g68sVJ4CjubysB9KQU&callback=initMap");
