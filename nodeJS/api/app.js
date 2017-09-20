@@ -8,15 +8,35 @@ var path = require("path");
 var logger = require('morgan');
 
 
-
 var dbHost = "mongodb://localhost:27017/sensores";
 var dbObject;
 var dbClient = mongo.MongoClient;
+var observed;
+
+mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("observedProperties");
+  	 collection.findOne({_id:"observedProperties"}, function(err,doc){
+	if(!err)
+	{
+	observed=doc;
+}
+}); 
+}
+});
+
 
 dbClient.connect(dbHost,function(err,db){
 	if(err) throw err; 
 	dbObject = db;
 });
+
+
+
 
 /**
  * Description
@@ -25,6 +45,8 @@ dbClient.connect(dbHost,function(err,db){
  * @return 
  */
 function getDataMQ7(responseObj){
+	observedMQ7=observed;
+	observedMQ7.name=["concentración de CO"];
 	dbObject.collection("MQ7").find({}).toArray(function(err, docs){
 	if( err ) throw err;
 	var timesArray=[];
@@ -32,8 +54,8 @@ function getDataMQ7(responseObj){
 
 	for(index in docs){
 		doc = docs[index];
-		var timeTmp = doc['when'];
-		var valuesTmp = doc['values'];
+		var timeTmp = doc['resultTime'];
+		var valuesTmp = doc['result'];
 		for(index2  in valuesTmp){
 			sample = valuesTmp[index2];
 			var COvalue = sample["CO"];
@@ -43,9 +65,34 @@ function getDataMQ7(responseObj){
 	}
 	var dataset ={
         "seriesname" : "CO",
+        "description" : "medición de concentración de monóxido de carbono en el aire",
+        "unitOfMeasurement": "ppm",
+        "sensor": "MQ7",
+        "observedProperty": observedMQ7,
+        "observationType": "periódica",
         "data" : valuesArray,
         "categories" : timesArray
       };
+     
+     
+	mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("datastreamMQ7");
+  collection.update(  
+  { _id: "datasetreamMQ7"},
+  { _id: "datasetreamMQ7", "seriesname" : dataset.seriesname, "description" :  dataset.description, "unitOfMeasurement": dataset.unitOfMeasurement, "sensor": dataset.sensor, "observedProperty": dataset.observedProperty, "observationType": dataset.observationType , observation: { result:dataset.data, resultTime:dataset.categories } },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
+      
 	var response = {"dataset" : dataset};
 	responseObj.json(response);
 	});
@@ -58,6 +105,8 @@ function getDataMQ7(responseObj){
  * @return 
  */
 function getDataDHT(responseObj,sensor){
+	observedDHT=observed;
+	observedDHT.name=["temperatura","humedad"];
 	dbObject.collection(sensor).find({}).toArray(function(err, docs){
 	if( err ) throw err;
 	var timesArray=[];
@@ -65,8 +114,8 @@ function getDataDHT(responseObj,sensor){
 	var humArray=[];	
 	for(index in docs){
 		doc = docs[index];
-		var timeTmp = doc['when'];
-		var valuesTmp = doc['values'];
+		var timeTmp = doc['resultTime'];
+		var valuesTmp = doc['result'];
 		for(index2  in valuesTmp){
 			sample = valuesTmp[index2];
 			var tempValue = sample["temperatura"];
@@ -78,10 +127,33 @@ function getDataDHT(responseObj,sensor){
 	}
 	var dataset ={
         "seriesname" : sensor,
+        "description" : "medición de temperatura y humedad relativa del aire",
+        "unitOfMeasurement": ["°C","%"],
+        "sensor": sensor,
+        "observedProperty": observedDHT,
+        "observationType": "periódica",
         "temp" : tempArray,
         "hum" : humArray,
         "categories" : timesArray
       };
+      
+  mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("datastream"+sensor);
+  collection.update(  
+  { _id: "datasetream"+sensor},
+  { _id: "datasetream"+sensor, "seriesname" : dataset.seriesname, "description" :  dataset.description, "unitOfMeasurement": dataset.unitOfMeasurement, "sensor": dataset.sensor, "observedProperty": dataset.observedProperty, "observationType": dataset.observationType , observation: { result:{temp: dataset.temp, hum:dataset.hum}, resultTime:dataset.categories } },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
 	var response = {"dataset" : dataset};
 	responseObj.json(response);
 	});
@@ -93,6 +165,8 @@ function getDataDHT(responseObj,sensor){
  * @return 
  */
 function getDataBMP180(responseObj){
+	observedBMP180=observed;
+	observedBMP180.name=["presión atmosférica","temperatura"];
 	dbObject.collection('BMP180').find({}).toArray(function(err, docs){
 	if( err ) throw err;
 	var timesArray=[];
@@ -100,8 +174,8 @@ function getDataBMP180(responseObj){
 	var presArray=[];	
 	for(index in docs){
 		doc = docs[index];
-		var timeTmp = doc['when'];
-		var valuesTmp = doc['values'];
+		var timeTmp = doc['resultTime'];
+		var valuesTmp = doc['result'];
 		for(index2  in valuesTmp){
 			sample = valuesTmp[index2]['medidas'];
 			var tempValue = sample[1];
@@ -113,10 +187,32 @@ function getDataBMP180(responseObj){
 	}
 	var dataset ={
         "seriesname" : 'BMP180',
+        "description" : "medición de presión atmosférica y temperatura del aire",
+        "unitOfMeasurement": ["hPa","°C"],
+        "sensor": "BMP180",
+        "observedProperty": observedBMP180,
+        "observationType": "periódica",
         "temp" : tempArray,
         "pres" : presArray,
         "categories" : timesArray
       };
+     mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("datastreamBMP180");
+  collection.update(  
+  { _id: "datasetreamBMP180"},
+  { _id: "datasetreamBMP180", "seriesname" : dataset.seriesname, "description" :  dataset.description, "unitOfMeasurement": dataset.unitOfMeasurement, "sensor": dataset.sensor, "observedProperty": dataset.observedProperty, "observationType": dataset.observationType , observation: { result:{pres:dataset.pres, temp:dataset.temp}, resultTime:dataset.categories } },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
 	var response = {"dataset" : dataset};
 	responseObj.json(response);
 	});
@@ -129,14 +225,16 @@ function getDataBMP180(responseObj){
  * @return 
  */
 function getDataGP2Y1010AU0F(responseObj){
+	observedGP2Y1010Au0F=observed;
+	observedGP2Y1010Au0F.name=["densidad de polvo"];
 	dbObject.collection("GP2Y1010AU0F").find({}).toArray(function(err, docs){
 	if( err ) throw err;
 	var timesArray=[];
 	var valuesArray=[];	
 	for(index in docs){
 		doc = docs[index];
-		var timeTmp = doc['when'];
-		var valuesTmp = doc['values'];
+		var timeTmp = doc['resultTime'];
+		var valuesTmp = doc['result'];
 		for(index2  in valuesTmp){
 			sample = valuesTmp[index2];
 			var DDvalue = sample["densidad de polvo"];
@@ -146,9 +244,31 @@ function getDataGP2Y1010AU0F(responseObj){
 	}
 	var dataset ={
         "seriesname" : "Densidad de polvo",
+        "description" : "medición de densidad de polvo en el aire",
+        "unitOfMeasurement": "mg/m3",
+        "sensor": "GP2Y1010Au0F",
+        "observedProperty": observedBMP180,
+        "observationType": "periódica",
         "data" : valuesArray,
         "categories" : timesArray
       };
+    	mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("datastreamGP2Y1010AU0F");
+  collection.update(  
+  { _id: "datasetreamGP2Y1010AU0F"},
+  { _id: "datasetreamGP2Y1010AU0F", "seriesname" : dataset.seriesname, "description" :  dataset.description, "unitOfMeasurement": dataset.unitOfMeasurement, "sensor": dataset.sensor, "observedProperty": dataset.observedProperty, "observationType": dataset.observationType , observation: { result:dataset.data, resultTime:dataset.categories } },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
 	var response = {"dataset" : dataset};
 	responseObj.json(response);
 	});
@@ -162,6 +282,8 @@ function getDataGP2Y1010AU0F(responseObj){
  * @return 
  */
 function getDataMQ135(responseObj){
+	observedMQ135=observed;
+	observedMQ135.name=["concentración de CO2","concentración de NOx", "concentración de NH3",];
 	dbObject.collection("MQ135").find({}).toArray(function(err, docs){
 	if( err ) throw err;
 	var timesArray=[];
@@ -170,8 +292,8 @@ function getDataMQ135(responseObj){
 	var NH3Array=[];		
 	for(index in docs){
 		doc = docs[index];
-		var timeTmp = doc['when'];
-		var valuesTmp = doc['values'];
+		var timeTmp = doc['resultTime'];
+		var valuesTmp = doc['result'];
 		for(index2  in valuesTmp){
 			sample = valuesTmp[index2];
 			var CO2Value = sample["CO2"];
@@ -185,11 +307,33 @@ function getDataMQ135(responseObj){
 	}
 	var dataset ={
         "seriesname" : "MQ135",
+        "description" : "medición de concentración de dióxido de carbono, óxidos de nitrógeno y amoniaco en el aire",
+        "unitOfMeasurement": "ppm",
+        "sensor": "MQ135",
+        "observedProperty": observedMQ135,
+        "observationType": "periódica",
         "CO2" : CO2Array,
         "NOx" : NOxArray,
         "NH3" : NH3Array,
         "categories" : timesArray
       };
+    	mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+	var collection = db.collection("datastreamMQ135");
+  collection.update(  
+  { _id: "datasetreamMQ135"},
+  { _id: "datasetreamMQ135", "seriesname" : dataset.seriesname, "description" :  dataset.description, "unitOfMeasurement": dataset.unitOfMeasurement, "sensor": dataset.sensor, "observedProperty": dataset.observedProperty, "observationType": dataset.observationType , observation: { result:{CO2:dataset.CO2, NOx:dataset.NOx, NH3:dataset.NH3}, resultTime:dataset.categories } },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
 	var response = {"dataset" : dataset};
 	responseObj.json(response);
 	});
@@ -204,14 +348,43 @@ function getDataMQ135(responseObj){
  * @return 
  */
 function getDataGPS(responseObj){
+	observedGPS=observed;
+	observedGPS.name=["concentración de CO2","concentración de NOx", "concentración de NH3",];
 	dbObject.collection("devices").find({"title":"Arduino UNO"}).toArray(function(err, docs){
 	if( err ) throw err;
 	for(index in docs){
 		doc = docs[index];
-		var latTmp = doc['lat'];
-		var lngTmp = doc['lng'];
+		var latTmp = doc['location']['location']['lat'];
+		var lngTmp = doc['location']['location']['lng'];
 	}
-	var response = {"lat" : latTmp, "lng":lngTmp};
+	var dataset ={
+        "seriesname" : "Posición geográfica",
+        "description" : "ubicación espacial del sistema de medición",
+        "unitOfMeasurement": "grados decimales",
+        "sensor": "GPS Neo-6M",
+        "observedProperty": observedGPS,
+        "observationType": "al inicio",
+        "lat" : latTmp, 
+        "lng":lngTmp
+      };
+   	mongo.MongoClient.connect(dbHost, function(err, db) {
+    if(err) {
+        throw err; 
+        console.log("Error");
+        }
+	else{	
+  var collection = db.collection("datastreamGPS");
+  collection.update(  
+  { _id: "datasetreamGPS"},
+  { _id: "datasetreamGPS", "seriesname" : dataset.seriesname, "description" :  dataset.description, "unitOfMeasurement": dataset.unitOfMeasurement, "sensor": dataset.sensor, "observedProperty": dataset.observedProperty, "observationType": dataset.observationType , observation: { result:{lat:dataset.lat, lng:dataset.lng}, resultTime:dataset.categories } },
+  { upsert:true },
+  function(err,docs) {
+    if(err) { console.log("Insert fail"); } // Improve error handling
+  }
+  )
+}
+});
+	var response = {"dataset" : dataset};
 	responseObj.json(response);
 	});
 }
