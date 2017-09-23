@@ -7,6 +7,7 @@ var flash = require("express-flash");
 var observed = require("./observedProperties");
 var observation = require("./observation");
 var datastream = require("./datastream");
+var feature = require("./featureOfInterest");
 
 var sen_find_midd = require("../middlewares/find_sensor");
 
