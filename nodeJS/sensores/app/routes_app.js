@@ -61,6 +61,8 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 
 
 
+
+
 /**
  * Description
  * @method encrypt
@@ -88,6 +90,8 @@ function decrypt(text){
 }
 
 router.get("/",function(req,res){
+	console.log(location);
+console.log(historicalLocation);
 	res.render("app/home");
 });
 
@@ -155,7 +159,7 @@ router.route("/devices/:id")
 	var prop = require("./properties");
 	var proper= prop.selectProperties(res.locals.device.title);
 	res.locals.device.location=location;
-	//res.locals.device.historicalLocation=historicalLocation;
+	//res.locals.device.historicalLocations=historicalLocation;
 	res.locals.device.properties=proper; //
 	res.locals.device.lat=lat; //
 	res.locals.device.lng=lng; //
@@ -202,7 +206,7 @@ router.route("/devices")
 	var prop = require("./properties");
 	var proper= prop.selectProperties(device.title);
 	device.location=location;
-	//device.historicalLocation=historicalLocation;
+	//device.historicalLocations=historicalLocation;
 	device.properties=proper; //
 	device.lat=lat; //
 	device.lng=lng; //
