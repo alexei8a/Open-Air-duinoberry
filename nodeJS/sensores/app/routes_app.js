@@ -90,8 +90,6 @@ function decrypt(text){
 }
 
 router.get("/",function(req,res){
-	console.log(location);
-console.log(historicalLocation);
 	res.render("app/home");
 });
 
@@ -222,7 +220,7 @@ router.route("/devices")
 					"lng": device.lng,
 					"creator": device.creator,
 					"location": device.location,
-					//"historicalLocation": device.historicalLocation
+					//"historicalLocation": device.historicalLocations
 			};
 
 			client.publish("devices",JSON.stringify(devJSON));
