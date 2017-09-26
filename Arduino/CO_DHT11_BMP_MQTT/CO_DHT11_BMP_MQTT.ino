@@ -30,7 +30,7 @@ void setup() {
 void loop() {
 //Se hacen 5 mediciones de concentración de CO para evitar valores extremos causados por perturbaciones 
   float sum=0;
-  for (int i=0;i<+4;i++){
+  for (int i=0;i<=4;i++){
   sum=sum+getCO();  
   }
   float ppm=sum/5;
