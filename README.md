@@ -15,7 +15,7 @@ Sistema _IoT_ que hace interoperables datos provenientes de sensores heterogéne
   - [Materiales](#materiales)
   - [Requerimientos para los sensores](#requerimientos-para-los-sensores)
   - [Configuración de las tarjetas _Arduino UNO Wifi_](#configuración-de-las-tarjetas-arduino-uno-wifi)
-  - [Configuración _Raspberry Pi 3_](#configuración-de-la-raspberry-pi-3)
+  - [Configuración de la _Raspberry Pi 3_](#configuración-de-la-raspberry-pi-3)
   - [Descarga del respositorio y manos a la obra](#descarga-del-repositorio-y-manos-a-la-obra)
   - [_Wiki_](#wiki)
   
