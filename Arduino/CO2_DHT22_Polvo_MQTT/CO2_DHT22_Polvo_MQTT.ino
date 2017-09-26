@@ -8,7 +8,7 @@
 #define TOPIC2 "arduinoUNOWifi/DHT22"
 #define TOPIC3 "arduinoUNOWifi/GP2Y1010AU0F"
 
-int pinDHT22 = 4; //Conectar el sensor DHT22 al pin 4 
+int pinDHT22 = 4; //Conectar el sensor DHT22 al pin D4 
 SimpleDHT22 dht22;
 
 int measurePin = 1; //Conectar la salida del sensor de polvo al pin A1 de la Arduino 
