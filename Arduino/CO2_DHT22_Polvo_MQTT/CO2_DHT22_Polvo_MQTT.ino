@@ -12,7 +12,7 @@ int pinDHT22 = 4; //Conectar el sensor DHT22 al pin 4
 SimpleDHT22 dht22;
 
 int measurePin = 1; //Conectar la salida del sensor de polvo al pin A1 de la Arduino 
-int ledPower = 3;   //Conecte el pin que controla el LED del sensor de polvo a la entrada D3 de la Arduino
+int ledPower = 3;   //Conectar el pin que controla el LED del sensor de polvo a la entrada D3 de la Arduino
  
 
 
@@ -97,7 +97,7 @@ void loop() {
 //Función que retorna el voltaje medido por el MQ135
 float getVoltaje(){
   int mq135_adc = analogRead(A0);
-  float mq135_voltaje = mq135_adc * (5.0 / 1023.0);
+  float mq135_voltaje = mq135_adc * (5.0 / 1023.0); // leer el valor análogo del sensor MQ135 conectado al pin A0
   return mq135_voltaje;
 }
 
@@ -111,7 +111,7 @@ float getDustDensity(){
   float dustDensity = 0;
   digitalWrite(ledPower,LOW); // encender el LED
   delayMicroseconds(samplingTime);
-  voMeasured = analogRead(measurePin); // leer el valor análogo del sensor 
+  voMeasured = analogRead(measurePin); // leer el valor análogo del sensor GP2Y1010AU0F conectado al pin A1
   delayMicroseconds(deltaTime);
   digitalWrite(ledPower,HIGH); // apagar el LED 
   delayMicroseconds(sleepTime);
