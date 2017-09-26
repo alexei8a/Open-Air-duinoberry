@@ -2,6 +2,7 @@
 #include <UnoWiFiDevEd.h>
 #include <SimpleDHT.h>
 #include <SFE_BMP180.h>
+#include <Wire.h>
 
 
 #define CONNECTOR "mqtt"
@@ -9,9 +10,9 @@
 #define TOPIC2 "arduinoUNOWifi/DHT11"
 #define TOPIC3 "arduinoUNOWifi/BMP180"
 
-int pinDHT11 = 2;
+int pinDHT11 = 2; //Conectar el sensor DHT22 al pin D2
 SimpleDHT11 dht11;
-SFE_BMP180 bmp180;
+SFE_BMP180 bmp180;//Conectar el sensor BMP180 a la Intterfaz I2C (A4 y A5 de la Arduino) 
 
 void setup() {
   Ciao.begin();
@@ -27,10 +28,12 @@ void setup() {
 }
 
 void loop() {
-
-  int vol = analogRead(A0); //Lee la salida analógica del MQ
-  float VRL = (vol / 1023.0) * 5.0;
-  float ppm = 50 * pow((((float)10000.0 / 2000.0) * ((5.0 / VRL) - 1)), -1.6) + 1.7;
+//Se hacen 5 mediciones de concentración de CO para evitar valores extremos causados por perturbaciones 
+  float sum=0;
+  for (int i=0;i<+4;i++){
+  sum=sum+getCO();  
+  }
+  float ppm=sum/5;
 
   String payload = "{";
   payload += "\"CO\":";
@@ -108,7 +111,13 @@ void loop() {
   delay(30000);
 }
 
-
+//Función que retorna la concentración de CO en el aire
+float getCO(){  
+  int vol= analogRead(A0); //Lee la salida analógica del MQ
+  float VRL = (vol / 1023.0) * 5.0;
+  float ppm = 50 * pow((((float)10000.0 / 2000.0) * ((5.0 / VRL) - 1)), -1.6) + 1.7;
+  return ppm;
+}
 
 
 
