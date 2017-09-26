@@ -16,7 +16,7 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
 	var collection = db.collection("locations");
   collection.update(  
   { _id: "historical locations", name : "Ubicaciones", desciption:"Posiciones históricas del sistema", encodingType : "WGS84"},
-    {$push:  { location:{lat:pos[0], lng:pos[1]}}} ,
+    {$push:  { location:{lat:pos[0], lng:pos[1]}, time: new Date() }} ,
   { upsert:true },
   function(err,docs) {
     if(err) { console.log("Insert fail"); } // Improve error handling
@@ -31,7 +31,7 @@ mongodb.MongoClient.connect(mongoUri, function(err, db) {
         throw err; 
         console.log("Error");
         }
-	else{	
+	else{
 	var collection = db.collection("lastlocation");
   collection.update(  
   { _id: "location"}, //
