@@ -24,7 +24,7 @@ void setup() {
 
 void loop() {
 
-//Se hacen 5 mediciones para evitar valores extremos causados por perturbaciones 
+//Se hacen 5 mediciones del voltaje del sensor MQ135 para evitar valores extremos causados por perturbaciones 
   float sum2=0;
   for (int i=0;i<=4;i++){
   sum2=sum2+getVoltaje();  
@@ -74,7 +74,7 @@ void loop() {
   Ciao.write(CONNECTOR, TOPIC2, payload2);
 
 
- //Se hacen 5 mediciones para evitar valores extremos causados por perturbaciones 
+ //Se hacen 5 mediciones de la salida del sensor de polvo para evitar valores extremos causados por perturbaciones 
   float sum=0;
   for (int i=0;i<=4;i++){
   sum=sum+getDustDensity();  
